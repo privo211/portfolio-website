@@ -8,7 +8,7 @@ import { skillCategories, allSkills } from '@/data/skills'
 
 const levelBadge: Record<string, string> = {
   expert: 'bg-violet-500/15 border-violet-500/30 text-violet-300 shadow-[0_0_10px_rgba(124,58,237,0.1)]',
-  proficient: 'bg-cyan-500/8 border-cyan-500/20 text-cyan-300',
+  proficient: 'bg-cyan-400/8 border-cyan-400/20 text-cyan-300',
   familiar: 'bg-white/[0.02] border-white/[0.06] text-white/35',
 }
 
@@ -61,7 +61,7 @@ export function Skills() {
             <span className="font-mono text-[0.6rem] text-white/25 uppercase tracking-[0.08em]">Expert</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-cyan-500/20 border border-cyan-500/25" />
+            <span className="w-2.5 h-2.5 rounded-full bg-cyan-400/20 border border-cyan-400/25" />
             <span className="font-mono text-[0.6rem] text-white/25 uppercase tracking-[0.08em]">Proficient</span>
           </div>
           <div className="flex items-center gap-2">

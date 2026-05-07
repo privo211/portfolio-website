@@ -71,7 +71,7 @@ export function Hero() {
         </div>
 
         <motion.p
-          className="max-w-2xl text-base sm:text-lg md:text-xl text-white/50 leading-relaxed mb-6"
+          className="max-w-2xl text-base sm:text-lg md:text-xl text-white/70 leading-relaxed mb-6"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.5, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
@@ -80,7 +80,7 @@ export function Hero() {
         </motion.p>
 
         <motion.div
-          className="flex flex-wrap items-center justify-center gap-3 text-sm text-white/40 mb-10"
+          className="flex flex-wrap items-center justify-center gap-3 text-sm text-white/55 mb-10"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.7, duration: 0.6 }}
@@ -103,7 +103,7 @@ export function Hero() {
           <MagneticButton
             href="/Priyanshu%20Vora.pdf"
             download="Priyanshu_Vora_Resume.pdf"
-            className="btn-primary !rounded-full !px-7 !py-3.5 !text-base"
+            className="btn-primary"
           >
             <Download size={18} />
             Download Resume
@@ -113,7 +113,7 @@ export function Hero() {
             href={SOCIAL_LINKS.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-outline !rounded-full !px-6 !py-3.5"
+            className="btn-outline"
           >
             <LinkedinIcon size={18} />
             LinkedIn
@@ -123,7 +123,7 @@ export function Hero() {
             href={SOCIAL_LINKS.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-outline !rounded-full !px-6 !py-3.5"
+            className="btn-outline"
           >
             <GithubIcon size={18} />
             GitHub

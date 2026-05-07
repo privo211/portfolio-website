@@ -15,7 +15,7 @@ export function Education() {
           <FadeIn>
             <div className="glass-panel p-8 sm:p-10 h-full">
               <div className="flex flex-col sm:flex-row sm:items-start gap-6">
-                <div className="shrink-0 w-14 h-14 rounded-xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center">
+                <div className="shrink-0 w-14 h-14 rounded-lg bg-violet-500/10 border border-violet-500/20 flex items-center justify-center">
                   <GraduationCap size={28} className="text-violet-400" />
                 </div>
                 <div>
@@ -63,7 +63,7 @@ export function Education() {
           </FadeIn>
 
           <FadeIn delay={0.15}>
-            <div className="glass-card p-8 h-full flex flex-col items-center justify-center text-center">
+            <div className="glass-card p-7 h-full flex flex-col items-center justify-center text-center">
               <div className="w-16 h-16 rounded-full bg-violet-500/10 border-2 border-violet-500/25 flex items-center justify-center mb-5">
                 <span className="font-display text-xl font-bold text-violet-300">GPA</span>
               </div>
@@ -71,10 +71,6 @@ export function Education() {
                 3.7
               </span>
               <span className="text-xs text-white/30 mt-1">out of 4.0</span>
-              <div className="mt-4 pt-4 border-t border-white/[0.06] w-full">
-                <p className="text-sm text-white/50">First-Class Standing</p>
-                <p className="text-sm text-white/50">Dean&apos;s Honour List Awardee</p>
-              </div>
             </div>
           </FadeIn>
         </div>

@@ -324,8 +324,8 @@ body {
 /* Button styles */
 .btn-primary {
   display: inline-flex; align-items: center; gap: 0.5rem;
-  border-radius: 9999px; padding: 0.75rem 1.5rem;
-  font-weight: 600; font-size: 0.938rem;
+  border-radius: 9999px; padding: 0.875rem 1.75rem;
+  font-weight: 600; font-size: 1rem;
   background: linear-gradient(135deg, #7C3AED, #6D28D9);
   color: white; border: none;
   box-shadow: 0 0 40px rgba(124, 58, 237, 0.3);
@@ -340,8 +340,8 @@ body {
 
 .btn-outline {
   display: inline-flex; align-items: center; gap: 0.5rem;
-  border-radius: 9999px; padding: 0.75rem 1.5rem;
-  font-weight: 500; font-size: 0.938rem;
+  border-radius: 9999px; padding: 0.875rem 1.75rem;
+  font-weight: 500; font-size: 1rem;
   background: transparent;
   color: white; border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;

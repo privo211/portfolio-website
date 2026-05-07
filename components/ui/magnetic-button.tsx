@@ -40,7 +40,7 @@ export function MagneticButton({
       setIsHovering(false);
     },
     className: cn(
-      "inline-flex items-center justify-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-medium text-text transition-colors hover:bg-bg-elevated",
+      "inline-flex items-center justify-center gap-2 rounded-full border border-border px-6 py-3 text-base font-medium text-text transition-colors hover:bg-bg-elevated",
       className
     ),
   };

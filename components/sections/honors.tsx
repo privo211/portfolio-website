@@ -56,7 +56,7 @@ export function Honors() {
                   <p className="font-mono text-xs text-violet-400/70 mb-3 uppercase tracking-[0.06em]">
                     {honor.issuer}
                   </p>
-                  <p className="text-sm text-white/40 leading-relaxed flex-1 mb-5">
+                  <p className="text-sm text-white/70 leading-relaxed flex-1 mb-5">
                     {honor.description}
                   </p>
 

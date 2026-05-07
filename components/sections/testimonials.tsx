@@ -33,7 +33,7 @@ export function Testimonials() {
                   &ldquo;{featured.quote}&rdquo;
                 </blockquote>
 
-                <div className="flex items-center gap-4 pt-6 border-t border-white/[0.05]">
+                <div className="flex items-center gap-4 pt-4 border-t border-white/[0.05]">
                   <div className="w-10 h-10 rounded-full bg-violet-500/12 border border-violet-500/25 flex items-center justify-center">
                     <span className="font-display text-xs font-bold text-violet-300">
                       {featured.name.split(' ').map((w) => w[0]).join('')}
@@ -66,7 +66,7 @@ export function Testimonials() {
                   </span>
                 </div>
 
-                <blockquote className="text-sm leading-relaxed text-white/55 italic mb-6 flex-1">
+                <blockquote className="text-sm leading-relaxed text-white/70 italic mb-6 flex-1">
                   &ldquo;{testimonial.quote.slice(0, 200)}&rdquo;
                 </blockquote>
 

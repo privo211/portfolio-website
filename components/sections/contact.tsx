@@ -9,7 +9,7 @@ import { GithubIcon, LinkedinIcon } from '@/components/ui/icons'
 
 export function Contact() {
   return (
-    <section id="contact" className="relative py-32 md:py-44 lg:py-56 section-padding">
+    <section id="contact" className="relative py-28 md:py-36 lg:py-44 section-padding">
       <div className="absolute inset-0 pointer-events-none flex items-center justify-center">
         <div className="w-[500px] h-[500px] rounded-full bg-violet-600/[0.03] blur-[120px]" />
       </div>
@@ -37,7 +37,7 @@ export function Contact() {
         </SplitText>
 
         <motion.p
-          className="text-white/40 text-base sm:text-lg max-w-lg mx-auto leading-relaxed mb-12"
+          className="text-white/70 text-base sm:text-lg max-w-lg mx-auto leading-relaxed mb-12"
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -56,7 +56,7 @@ export function Contact() {
         >
           <MagneticButton
             href={`mailto:${SITE_CONFIG.email}`}
-            className="btn-primary !rounded-full !px-7 !py-3.5 !text-base"
+            className="btn-primary"
           >
             <Mail size={18} />
             Say Hello
@@ -65,7 +65,7 @@ export function Contact() {
           <MagneticButton
             href="/Priyanshu%20Vora.pdf"
             download="Priyanshu_Vora_Resume.pdf"
-            className="btn-outline !rounded-full !px-6 !py-3.5"
+            className="btn-outline"
           >
             <Download size={18} />
             Download Resume
@@ -75,7 +75,7 @@ export function Contact() {
             href={SOCIAL_LINKS.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-outline !rounded-full !px-6 !py-3.5"
+            className="btn-outline"
           >
             <LinkedinIcon size={18} />
             LinkedIn
@@ -85,7 +85,7 @@ export function Contact() {
             href={SOCIAL_LINKS.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-outline !rounded-full !px-6 !py-3.5"
+            className="btn-outline"
           >
             <GithubIcon size={18} />
             GitHub

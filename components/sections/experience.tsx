@@ -64,15 +64,15 @@ export function Experience() {
                     <h3 className="font-display text-2xl sm:text-3xl font-bold text-white mb-2 leading-tight">
                       {exp.role}
                     </h3>
-                    <p className="text-white/40 text-sm sm:text-base mb-6">
+                    <p className="text-white/55 text-sm sm:text-base mb-6">
                       {exp.company} <span className="mx-2 opacity-30">·</span> {exp.location}
                     </p>
 
                     <ul className="space-y-3.5">
                       {exp.description.map((item, j) => (
                         <li key={j} className="flex items-start gap-3">
-                          <span className="mt-[0.45rem] h-1.5 w-1.5 shrink-0 rounded-full bg-violet-500/60" />
-                          <span className="text-white/55 text-sm sm:text-base leading-relaxed">{item}</span>
+                          <span className="mt-[0.45rem] h-1.5 w-1.5 shrink-0 rounded-full bg-violet-400/60" />
+                          <span className="text-white/70 text-sm sm:text-base leading-relaxed">{item}</span>
                         </li>
                       ))}
                     </ul>

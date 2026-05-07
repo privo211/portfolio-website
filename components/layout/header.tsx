@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'motion/react'
-import { NAV_ITEMS } from '@/lib/constants'
+import { NAV_ITEMS, SECTION_IDS } from '@/lib/constants'
 import { useCursor } from '@/components/providers/cursor-provider'
+import { useSectionInView } from '@/hooks/use-section-in-view'
 import { NavMenu } from './nav-menu'
 import { cn } from '@/lib/utils'
 
@@ -11,6 +12,7 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const { setIsHovering } = useCursor()
+  const activeSection = useSectionInView(Object.values(SECTION_IDS))
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50)
@@ -44,17 +46,26 @@ export function Header() {
         </a>
 
         <nav className="hidden md:flex items-center gap-1">
-          {NAV_ITEMS.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className="text-[0.8rem] text-white/40 hover:text-white px-3 py-1.5 rounded-full hover:bg-white/[0.03] transition-all duration-200"
-              onMouseEnter={() => setIsHovering(true)}
-              onMouseLeave={() => setIsHovering(false)}
-            >
-              {item.label}
-            </a>
-          ))}
+          {NAV_ITEMS.map((item) => {
+            const sectionId = item.href.slice(1)
+            const isActive = activeSection === sectionId
+            return (
+              <a
+                key={item.href}
+                href={item.href}
+                className={cn(
+                  'text-[0.8rem] px-3 py-1.5 rounded-full transition-all duration-200',
+                  isActive
+                    ? 'text-violet-300 bg-violet-500/10'
+                    : 'text-white/40 hover:text-white hover:bg-white/[0.03]'
+                )}
+                onMouseEnter={() => setIsHovering(true)}
+                onMouseLeave={() => setIsHovering(false)}
+              >
+                {item.label}
+              </a>
+            )
+          })}
         </nav>
 
         <button

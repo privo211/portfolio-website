@@ -14,8 +14,8 @@ function ProjectCard({ project }: { project: typeof featuredProjects[number] }) 
   return (
     <motion.article
       className={cn(
-        'group relative flex flex-col overflow-hidden rounded-[1.75rem] p-8 sm:p-10 md:p-12 h-full',
-        'border border-white/[0.05] bg-gradient-to-br from-[#0D0D1A]/80 to-[#0A0A14]/80 backdrop-blur-sm',
+        'group relative flex flex-col overflow-hidden rounded-2xl p-8 sm:p-10 md:p-12 h-full',
+        'border border-white/[0.05] bg-bg-elevated/80 backdrop-blur-sm',
         'hover:border-violet-500/20 hover:shadow-[0_0_50px_rgba(124,58,237,0.06)] transition-all duration-500'
       )}
       whileHover={{ y: -4 }}
@@ -23,7 +23,7 @@ function ProjectCard({ project }: { project: typeof featuredProjects[number] }) 
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
     >
-      <div className="pointer-events-none absolute inset-0 rounded-[1.75rem] opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-gradient-to-br from-violet-500/[0.03] via-cyan-500/[0.02] to-transparent" />
+      <div className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-gradient-to-br from-violet-500/[0.03] via-cyan-400/[0.02] to-transparent" />
 
       <div className="relative z-10 flex flex-col h-full">
         <span className="font-mono text-[0.65rem] text-violet-400/80 uppercase tracking-[0.15em] font-semibold mb-4">
@@ -34,15 +34,15 @@ function ProjectCard({ project }: { project: typeof featuredProjects[number] }) 
           {project.title}
         </h3>
 
-        <p className="text-white/50 leading-relaxed text-sm sm:text-base mb-8">
+        <p className="text-white/70 leading-relaxed text-sm sm:text-base mb-8">
           {project.description}
         </p>
 
         <ul className="flex flex-col gap-4 mb-auto">
           {project.highlights.map((item, j) => (
             <li key={j} className="flex items-start gap-3">
-              <span className="mt-[0.45rem] h-1.5 w-1.5 shrink-0 rounded-full bg-violet-500 shadow-[0_0_8px_rgba(139,92,246,0.5)]" />
-              <span className="text-white/45 text-sm leading-relaxed">{item}</span>
+              <span className="mt-[0.45rem] h-1.5 w-1.5 shrink-0 rounded-full bg-violet-400/60" />
+              <span className="text-white/70 text-sm leading-relaxed">{item}</span>
             </li>
           ))}
         </ul>
@@ -111,7 +111,7 @@ export function Projects() {
                 <h4 className="font-display text-base font-bold text-white mb-2">
                   {project.title}
                 </h4>
-                <p className="text-white/40 text-xs leading-relaxed mb-4 flex-1 line-clamp-2">
+                <p className="text-white/55 text-xs leading-relaxed mb-4 flex-1 line-clamp-2">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-1.5 mt-auto">

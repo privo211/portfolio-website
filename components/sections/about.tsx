@@ -20,7 +20,7 @@ export function About() {
         <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-12 lg:gap-16 items-start">
           <FadeIn direction="left">
             <div className="flex flex-col items-center lg:items-start gap-6">
-              <div className="relative w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden ring-1 ring-white/[0.06] ring-offset-4 ring-offset-[#050510]">
+              <div className="relative w-48 h-48 sm:w-56 sm:h-56 rounded-2xl overflow-hidden ring-1 ring-white/[0.06] ring-offset-4 ring-offset-bg">
                 <div className="absolute inset-0 bg-gradient-to-br from-violet-600/30 to-cyan-600/20 mix-blend-overlay z-10" />
                 <Image
                   src="/data/Priyanshu_Profile.png"
@@ -62,7 +62,7 @@ export function About() {
                     <span className={`font-display text-3xl sm:text-4xl font-extrabold ${stat.accent}`}>
                       {stat.value}
                     </span>
-                    <p className="mt-2 text-xs sm:text-sm text-white/40 leading-snug">
+                    <p className="mt-2 text-xs sm:text-sm text-white/70 leading-snug">
                       {stat.label}
                     </p>
                   </div>

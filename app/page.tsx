@@ -12,7 +12,6 @@ import { Education } from "@/components/sections/education";
 import { Honors } from "@/components/sections/honors";
 import { Testimonials } from "@/components/sections/testimonials";
 import { Skills } from "@/components/sections/skills";
-import { ResumeViewer } from "@/components/sections/resume-viewer";
 import { Contact } from "@/components/sections/contact";
 
 export default function Home() {
@@ -30,7 +29,6 @@ export default function Home() {
         <Honors />
         <Testimonials />
         <Skills />
-        <ResumeViewer />
         <Contact />
       </main>
       <Footer />
