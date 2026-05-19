@@ -3,6 +3,7 @@
 import { SectionHeading } from '@/components/ui/section-heading'
 import { FadeIn } from '@/components/animations/fade-in'
 import { education } from '@/data/education'
+import { honors } from '@/data/honors'
 import { GraduationCap, Award, BookOpen } from 'lucide-react'
 
 export function Education() {
@@ -55,6 +56,25 @@ export function Education() {
                           {course}
                         </span>
                       ))}
+                    </div>
+
+                    <div id="honors" className="scroll-mt-24" />
+                    <div className="pt-6 mt-6 border-t border-[var(--theme-border)]">
+                      <h4 className="flex items-center gap-2 font-mono text-[0.65rem] text-[var(--theme-accent)] uppercase tracking-[0.12em] mb-4">
+                        <Award size={14} />
+                        Honors &amp; Awards
+                      </h4>
+                      <div className="flex flex-wrap gap-3">
+                        {honors.map((honor) => (
+                          <span
+                            key={honor.id}
+                            className="inline-flex items-center gap-1.5 rounded-full bg-amber-400/8 border border-amber-400/20 px-3.5 py-1.5 text-xs font-medium text-amber-600 dark:text-amber-300/80"
+                          >
+                            <Award size={12} />
+                            {honor.title}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>

@@ -18,20 +18,20 @@ export function ResumeViewer() {
 
         <FadeIn>
           <div className="glass-panel p-8 sm:p-10">
-            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-10 pb-10 border-b border-white/[0.05]">
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-10 pb-10 border-b border-[var(--theme-border)]">
               <div>
                 <h3 className="font-display text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
                   {SITE_CONFIG.name}
                 </h3>
-                <p className="text-lg text-violet-400 font-medium mt-2">{SITE_CONFIG.role}</p>
-                <p className="text-sm text-white/35 mt-2">
+                <p className="text-lg text-[var(--theme-accent)] font-medium mt-2">{SITE_CONFIG.role}</p>
+                <p className="text-sm text-[var(--theme-text-muted)] mt-2">
                   {SITE_CONFIG.location} · {SITE_CONFIG.email}
                 </p>
                 <div className="flex gap-4 mt-3">
-                  <a href="https://linkedin.com/in/priyanshuvora" target="_blank" rel="noopener noreferrer" className="font-mono text-[0.65rem] text-cyan-400/70 hover:text-cyan-400 transition-colors">
+                  <a                    href="https://linkedin.com/in/priyanshuvora" target="_blank" rel="noopener noreferrer" className="font-mono text-[0.7rem] text-[var(--theme-accent)] hover:text-[var(--theme-accent)] transition-colors">
                     linkedin.com/in/priyanshuvora
                   </a>
-                  <a href="https://github.com/privo211" target="_blank" rel="noopener noreferrer" className="font-mono text-[0.65rem] text-cyan-400/70 hover:text-cyan-400 transition-colors">
+                  <a                    href="https://github.com/privo211" target="_blank" rel="noopener noreferrer" className="font-mono text-[0.7rem] text-[var(--theme-accent)] hover:text-[var(--theme-accent)] transition-colors">
                     github.com/privo211
                   </a>
                 </div>
@@ -48,12 +48,8 @@ export function ResumeViewer() {
             </div>
 
             <ResumeBlock title="Professional Summary">
-              <p className="text-white/55 text-sm leading-relaxed">
-                Full-stack engineer specializing in enterprise automation and AI integration, with deep expertise
-                in architecting high-performance modern web backends. Proven ability to eliminate operational
-                bottlenecks by engineering resilient data pipelines, AI-powered workflows, and complex ERP
-                integrations. Combines deep knowledge of enterprise data structures with agile, modern development
-                practices to deliver high-impact, production-ready solutions.
+              <p className="text-[var(--theme-text-muted)] text-sm leading-relaxed">
+                Full-stack engineer with 2.5 years of experience building enterprise automation, ERP integrations, and backend systems. Skilled in Python, TypeScript, Azure, and Dynamics 365 Business Central. Recent Computer Science graduate from Brock University (GPA 3.7).
               </p>
             </ResumeBlock>
 
@@ -62,12 +58,12 @@ export function ResumeViewer() {
                 <div key={exp.id} className="mb-6 last:mb-0">
                   <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-1.5">
                     <h4 className="text-sm font-semibold text-white">{exp.role}</h4>
-                    <span className="font-mono text-[0.65rem] text-violet-400/70 shrink-0">{exp.period}</span>
+                    <span className="font-mono text-[0.7rem] text-violet-400/70 shrink-0">{exp.period}</span>
                   </div>
-                  <p className="text-xs text-white/30 mb-2">{exp.company} — {exp.location}</p>
+                  <p className="text-xs text-[var(--theme-text-muted)] opacity-60 mb-2">{exp.company} — {exp.location}</p>
                   <ul className="space-y-1.5">
                     {exp.description.map((item, j) => (
-                      <li key={j} className="text-xs text-white/45 flex items-start gap-2">
+                      <li key={j} className="text-xs text-[var(--theme-text-muted)] flex items-start gap-2">
                         <span className="mt-[0.4rem] h-1 w-1 shrink-0 rounded-full bg-violet-500/40" />
                         {item}
                       </li>
@@ -85,13 +81,13 @@ export function ResumeViewer() {
                       <FileText size={14} className="text-violet-400" />
                       {project.title}
                     </h4>
-                    <span className="font-mono text-[0.6rem] text-cyan-400/60">
+                    <span className="font-mono text-[0.7rem] text-[var(--theme-text-muted)]">
                       {project.technologies.slice(0, 4).join(', ')}
                     </span>
                   </div>
                   <ul className="space-y-1">
                     {project.highlights.map((item, j) => (
-                      <li key={j} className="text-xs text-white/40 flex items-start gap-2">
+                      <li key={j} className="text-xs text-[var(--theme-text-muted)] flex items-start gap-2">
                         <span className="mt-[0.4rem] h-1 w-1 shrink-0 rounded-full bg-violet-500/30" />
                         {item}
                       </li>
@@ -104,16 +100,16 @@ export function ResumeViewer() {
             <ResumeBlock title="Technical Skills">
               {skillCategories.map((cat) => (
                 <div key={cat.name} className="mb-2 last:mb-0">
-                  <span className="font-mono text-[0.65rem] text-violet-400/70 font-medium">{cat.name}:</span>{' '}
-                  <span className="text-xs text-white/45">{cat.skills.map((s) => s.name).join(', ')}</span>
+                  <span className="font-mono text-[0.7rem] text-[var(--theme-accent)] font-medium">{cat.name}:</span>{' '}
+                  <span className="text-xs text-[var(--theme-text-muted)]">{cat.skills.map((s) => s.name).join(', ')}</span>
                 </div>
               ))}
             </ResumeBlock>
 
             <ResumeBlock title="Education" last>
               <h4 className="text-sm font-semibold text-white">{education.degree}</h4>
-              <p className="text-xs text-white/30">{education.school}, {education.location}</p>
-              <p className="text-xs text-white/30">{education.period} · GPA: {education.gpa}</p>
+              <p className="text-xs text-[var(--theme-text-muted)] opacity-60">{education.school}, {education.location}</p>
+              <p className="text-xs text-[var(--theme-text-muted)] opacity-60">{education.period} · GPA: {education.gpa}</p>
               <p className="text-xs text-amber-300/60 mt-1">{education.honors.join(' · ')}</p>
             </ResumeBlock>
           </div>
@@ -125,7 +121,7 @@ export function ResumeViewer() {
 
 function ResumeBlock({ title, children, last }: { title: string; children: React.ReactNode; last?: boolean }) {
   return (
-    <div className={`${last ? 'pt-8' : 'py-8'} ${last ? '' : 'border-b border-white/[0.04]'}`}>
+    <div className={`${last ? 'pt-8' : 'py-8'} ${last ? '' : 'border-b border-[var(--theme-border)]'}`}>
       <h4 className="font-mono text-[0.7rem] text-violet-400/80 uppercase tracking-[0.1em] font-medium mb-5 flex items-center gap-2">
         <span className="w-1 h-1 rounded-full bg-violet-500" />
         {title}

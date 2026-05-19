@@ -4,8 +4,7 @@ import { motion } from 'motion/react'
 import { SplitText } from '@/components/ui/split-text'
 import { MagneticButton } from '@/components/ui/magnetic-button'
 import { SOCIAL_LINKS, SITE_CONFIG } from '@/lib/constants'
-import { Mail, Download } from 'lucide-react'
-import { GithubIcon, LinkedinIcon } from '@/components/ui/icons'
+import { Mail } from 'lucide-react'
 
 export function Contact() {
   return (
@@ -18,14 +17,12 @@ export function Contact() {
         <div className="section-divider mb-16" />
 
         <motion.span
-          className="inline-flex items-center gap-2 font-mono text-xs text-violet-400/70 uppercase tracking-[0.15em] mb-6"
+          className="inline-flex items-center gap-2 font-mono text-xs text-[var(--theme-accent)] uppercase tracking-[0.15em] mb-6"
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <span className="text-cyan-400/70">&gt;</span>
-          open to work
-          <span className="text-cyan-400/70">&lt;</span>
+          Available now
         </motion.span>
 
         <SplitText
@@ -37,14 +34,14 @@ export function Contact() {
         </SplitText>
 
         <motion.p
-          className="text-white/40 text-base sm:text-lg max-w-lg mx-auto leading-relaxed mb-12"
+          className="text-[var(--theme-text-muted)] text-base sm:text-lg max-w-lg mx-auto leading-relaxed mb-12"
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.15 }}
         >
-          Seeking Software Developer &amp; AI Solutions roles in Toronto.
-          Open to on-site, hybrid, or remote — available for full-time immediately.
+          Currently seeking full-time Software Engineer roles in Toronto.
+          Open to on-site, hybrid, or remote. Let&apos;s talk.
         </motion.p>
 
         <motion.div
@@ -61,39 +58,26 @@ export function Contact() {
             <Mail size={18} />
             Say Hello
           </MagneticButton>
+        </motion.div>
 
-          <MagneticButton
-            href="/Priyanshu%20Vora.pdf"
-            download="Priyanshu_Vora_Resume.pdf"
-            className="btn-outline !rounded-full !px-6 !py-3.5"
-          >
-            <Download size={18} />
-            Download Resume
-          </MagneticButton>
-
-          <MagneticButton
-            href={SOCIAL_LINKS.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-outline !rounded-full !px-6 !py-3.5"
-          >
-            <LinkedinIcon size={18} />
+        <motion.div
+          className="mt-8 flex items-center justify-center gap-6"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5 }}
+        >
+          <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="text-sm text-[var(--theme-text-muted)] hover:text-[var(--theme-accent)] transition-colors">
             LinkedIn
-          </MagneticButton>
-
-          <MagneticButton
-            href={SOCIAL_LINKS.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-outline !rounded-full !px-6 !py-3.5"
-          >
-            <GithubIcon size={18} />
+          </a>
+          <span className="text-[var(--theme-text-muted)] opacity-20">·</span>
+          <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" className="text-sm text-[var(--theme-text-muted)] hover:text-[var(--theme-accent)] transition-colors">
             GitHub
-          </MagneticButton>
+          </a>
         </motion.div>
 
         <motion.p
-          className="mt-10 font-mono text-xs text-white/20"
+          className="mt-10 font-mono text-xs text-[var(--theme-text-muted)] opacity-40"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}

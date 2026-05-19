@@ -9,7 +9,6 @@ import { About } from "@/components/sections/about";
 import { Experience } from "@/components/sections/experience";
 import { Projects } from "@/components/sections/projects";
 import { Education } from "@/components/sections/education";
-import { Honors } from "@/components/sections/honors";
 import { Testimonials } from "@/components/sections/testimonials";
 import { Skills } from "@/components/sections/skills";
 import { ResumeViewer } from "@/components/sections/resume-viewer";
@@ -27,7 +26,6 @@ export default function Home() {
         <Experience />
         <Projects />
         <Education />
-        <Honors />
         <Testimonials />
         <Skills />
         <ResumeViewer />

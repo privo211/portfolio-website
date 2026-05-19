@@ -29,19 +29,25 @@ export function Testimonials() {
                   </span>
                 </div>
 
-                <blockquote className="text-base sm:text-lg leading-relaxed text-white/70 italic mb-8 max-w-3xl">
+                <blockquote className="text-base sm:text-lg leading-relaxed text-[var(--theme-text)] opacity-80 italic mb-8 max-w-3xl">
                   &ldquo;{featured.quote}&rdquo;
                 </blockquote>
 
-                <div className="flex items-center gap-4 pt-6 border-t border-white/[0.05]">
+                <div className="flex items-center gap-4 pt-6 border-t border-[var(--theme-border)]">
                   <div className="w-10 h-10 rounded-full bg-violet-500/12 border border-violet-500/25 flex items-center justify-center">
                     <span className="font-display text-xs font-bold text-violet-300">
                       {featured.name.split(' ').map((w) => w[0]).join('')}
                     </span>
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-white">{featured.name}</p>
-                    <p className="text-xs text-white/35">{featured.role}, {featured.company}</p>
+                    <p className="text-sm font-medium text-[var(--theme-text)]">{featured.name}</p>
+                    <p className="text-xs text-[var(--theme-text-muted)] opacity-60">{featured.role}, {featured.company}</p>
+                    {featured.id.includes('2024') && (
+                      <span className="text-[0.6rem] text-[var(--theme-text-muted)] opacity-60 uppercase tracking-[0.08em]">2024 Review</span>
+                    )}
+                    {featured.id.includes('2025') && (
+                      <span className="text-[0.6rem] text-[var(--theme-text-muted)] opacity-60 uppercase tracking-[0.08em]">2025 Review</span>
+                    )}
                   </div>
                 </div>
               </div>
@@ -61,24 +67,30 @@ export function Testimonials() {
                       className={j < 4 ? 'fill-amber-400 text-amber-400' : 'fill-zinc-700 text-zinc-700'}
                     />
                   ))}
-                  <span className="ml-2 font-mono text-[0.55rem] text-white/25 uppercase tracking-[0.08em]">
+                  <span className="ml-2 font-mono text-[0.55rem] text-[var(--theme-text-muted)] opacity-40 uppercase tracking-[0.08em]">
                     {testimonial.rating}
                   </span>
                 </div>
 
-                <blockquote className="text-sm leading-relaxed text-white/55 italic mb-6 flex-1">
-                  &ldquo;{testimonial.quote.slice(0, 200)}&rdquo;
+                <blockquote className="text-sm leading-relaxed text-[var(--theme-text-muted)] italic mb-6 flex-1">
+                  &ldquo;{testimonial.quote}&rdquo;
                 </blockquote>
 
-                <div className="flex items-center gap-3 pt-4 border-t border-white/[0.05]">
+                <div className="flex items-center gap-3 pt-4 border-t border-[var(--theme-border)]">
                   <div className="w-8 h-8 rounded-full bg-cyan-500/12 border border-cyan-500/20 flex items-center justify-center">
                     <span className="font-display text-[0.6rem] font-bold text-cyan-300">
                       {testimonial.name.split(' ').map((w) => w[0]).join('')}
                     </span>
                   </div>
                   <div>
-                    <p className="text-xs font-medium text-white">{testimonial.name}</p>
-                    <p className="text-[0.65rem] text-white/30">{testimonial.role}, {testimonial.company}</p>
+                    <p className="text-xs font-medium text-[var(--theme-text)]">{testimonial.name}</p>
+                    <p className="text-[0.65rem] text-[var(--theme-text-muted)] opacity-50">{testimonial.role}, {testimonial.company}</p>
+                    {testimonial.id.includes('2024') && (
+                      <span className="text-[0.6rem] text-[var(--theme-text-muted)] opacity-60 uppercase tracking-[0.08em]">2024 Review</span>
+                    )}
+                    {testimonial.id.includes('2025') && (
+                      <span className="text-[0.6rem] text-[var(--theme-text-muted)] opacity-60 uppercase tracking-[0.08em]">2025 Review</span>
+                    )}
                   </div>
                 </div>
               </div>
