@@ -25,27 +25,29 @@ export function CustomCursor() {
 
   return (
     <>
-      {/* Inner dot — visible on hover */}
       <div
         ref={cursorRef}
-        className="fixed top-0 left-0 pointer-events-none z-[150] -translate-x-1/2 -translate-y-1/2 hidden md:block transition-all duration-300"
+        aria-hidden="true"
+        className="custom-cursor-dot fixed top-0 left-0 pointer-events-none z-[150] -translate-x-1/2 -translate-y-1/2 hidden md:block transition-all duration-300"
         style={{
-          width: isHovering ? '6px' : '0px',
-          height: isHovering ? '6px' : '0px',
+          width: isHovering ? '4px' : '0px',
+          height: isHovering ? '4px' : '0px',
           borderRadius: '50%',
-          background: '#A78BFA',
-          boxShadow: isHovering ? '0 0 16px rgba(139,92,246,0.8)' : 'none',
+          background: 'var(--theme-accent)',
+          boxShadow: isHovering ? '0 0 12px var(--theme-accent-glow-strong)' : 'none',
+          willChange: 'transform',
         }}
       />
-      {/* Outer ring — always visible */}
       <div
         ref={ringRef}
-        className="fixed top-0 left-0 pointer-events-none z-[149] -translate-x-1/2 -translate-y-1/2 hidden md:block transition-all duration-300"
+        aria-hidden="true"
+        className="custom-cursor-ring fixed top-0 left-0 pointer-events-none z-[149] -translate-x-1/2 -translate-y-1/2 hidden md:block transition-all duration-300"
         style={{
-          width: isHovering ? '40px' : '28px',
-          height: isHovering ? '40px' : '28px',
+          width: isHovering ? '28px' : '20px',
+          height: isHovering ? '28px' : '20px',
           borderRadius: '50%',
-          border: `1px solid ${isHovering ? 'rgba(34,211,238,0.5)' : 'rgba(139,92,246,0.25)'}`,
+          border: `1px solid ${isHovering ? 'var(--theme-accent)' : 'var(--theme-accent-glow)'}`,
+          willChange: 'transform',
         }}
       />
     </>

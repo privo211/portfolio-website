@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { motion } from "motion/react";
 import { NAV_ITEMS, SOCIAL_LINKS } from "@/lib/constants";
 import { navMenuVariants } from "@/lib/animations";
@@ -10,6 +11,14 @@ interface NavMenuProps {
 }
 
 export function NavMenu({ onClose, activeSection }: NavMenuProps) {
+  useEffect(() => {
+    const handleEsc = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') onClose()
+    }
+    window.addEventListener('keydown', handleEsc)
+    return () => window.removeEventListener('keydown', handleEsc)
+  }, [onClose])
+
   return (
     <motion.div
       className="fixed inset-0 z-50 bg-bg-elevated flex flex-col items-center justify-center"
