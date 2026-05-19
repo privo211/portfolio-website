@@ -14,16 +14,16 @@ export function Education() {
 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-8">
           <FadeIn>
-            <div className="glass-panel p-8 sm:p-10 h-full">
+            <div className="bg-[var(--theme-bg-elevated)] border border-[var(--theme-border)] rounded-[1.5rem] p-8 sm:p-10 h-full">
               <div className="flex flex-col sm:flex-row sm:items-start gap-6">
                 <div className="shrink-0 w-14 h-14 rounded-xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center">
                   <GraduationCap size={28} className="text-violet-400" />
                 </div>
                 <div>
-                  <h3 className="font-display text-2xl sm:text-3xl font-bold text-white mb-1">
+                  <h3 className="font-display text-2xl sm:text-3xl font-bold text-[var(--theme-text)] mb-1">
                     {education.school}
                   </h3>
-                  <p className="text-white/70 text-base sm:text-lg font-medium mb-1">
+                  <p className="text-[var(--theme-text-muted)] text-base sm:text-lg font-medium mb-1">
                     {education.degree}
                   </p>
                   <p className="text-[var(--theme-text-muted)] opacity-60 text-sm mb-4">
@@ -87,7 +87,7 @@ export function Education() {
               <div className="w-16 h-16 rounded-full bg-violet-500/10 border-2 border-violet-500/25 flex items-center justify-center mb-5">
                 <span className="font-display text-xl font-bold text-violet-300">GPA</span>
               </div>
-              <span className="font-display text-5xl sm:text-6xl font-extrabold text-white">
+              <span className="font-display text-5xl sm:text-6xl font-extrabold text-[var(--theme-text)]">
                 3.7
               </span>
               <span className="text-xs text-[var(--theme-text-muted)] opacity-50 mt-1">out of 4.0</span>

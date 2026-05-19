@@ -20,7 +20,7 @@ export function ResumeViewer() {
           <div className="glass-panel p-8 sm:p-10">
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-10 pb-10 border-b border-[var(--theme-border)]">
               <div>
-                <h3 className="font-display text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+                <h3 className="font-display text-3xl sm:text-4xl font-extrabold text-[var(--theme-text)] tracking-tight">
                   {SITE_CONFIG.name}
                 </h3>
                 <p className="text-lg text-[var(--theme-accent)] font-medium mt-2">{SITE_CONFIG.role}</p>
@@ -57,7 +57,7 @@ export function ResumeViewer() {
               {experiences.filter((e) => e.type === 'work').map((exp) => (
                 <div key={exp.id} className="mb-6 last:mb-0">
                   <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-1.5">
-                    <h4 className="text-sm font-semibold text-white">{exp.role}</h4>
+                    <h4 className="text-sm font-semibold text-[var(--theme-text)]">{exp.role}</h4>
                     <span className="font-mono text-[0.7rem] text-violet-400/70 shrink-0">{exp.period}</span>
                   </div>
                   <p className="text-xs text-[var(--theme-text-muted)] opacity-60 mb-2">{exp.company} — {exp.location}</p>
@@ -77,7 +77,7 @@ export function ResumeViewer() {
               {featuredProjects.map((project) => (
                 <div key={project.id} className="mb-5 last:mb-0">
                   <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-1 mb-1.5">
-                    <h4 className="text-sm font-semibold text-white flex items-center gap-2">
+                    <h4 className="text-sm font-semibold text-[var(--theme-text)] flex items-center gap-2">
                       <FileText size={14} className="text-violet-400" />
                       {project.title}
                     </h4>
@@ -107,7 +107,7 @@ export function ResumeViewer() {
             </ResumeBlock>
 
             <ResumeBlock title="Education" last>
-              <h4 className="text-sm font-semibold text-white">{education.degree}</h4>
+              <h4 className="text-sm font-semibold text-[var(--theme-text)]">{education.degree}</h4>
               <p className="text-xs text-[var(--theme-text-muted)] opacity-60">{education.school}, {education.location}</p>
               <p className="text-xs text-[var(--theme-text-muted)] opacity-60">{education.period} · GPA: {education.gpa}</p>
               <p className="text-xs text-amber-300/60 mt-1">{education.honors.join(' · ')}</p>

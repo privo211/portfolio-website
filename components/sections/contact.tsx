@@ -28,7 +28,7 @@ export function Contact() {
         <SplitText
           as="h2"
           type="words"
-          className="font-display text-[clamp(2rem,6vw,5rem)] font-bold leading-[1.05] tracking-[-0.02em] text-white mb-8"
+          className="font-display text-[clamp(2rem,6vw,5rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[var(--theme-text)] mb-8"
         >
           Let&apos;s Work Together
         </SplitText>

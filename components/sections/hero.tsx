@@ -51,7 +51,7 @@ export function Hero() {
             as="h1"
             type="chars"
             trigger="load"
-            className="font-display text-[clamp(3rem,8vw,7rem)] font-extrabold leading-[0.88] tracking-[-0.03em] text-white"
+            className="font-display text-[clamp(3rem,8vw,7rem)] font-extrabold leading-[0.88] tracking-[-0.03em] text-[var(--theme-text)]"
             stagger={0.025}
             duration={1.1}
           >
@@ -61,7 +61,7 @@ export function Hero() {
             as="h1"
             type="chars"
             trigger="load"
-            className="font-display text-[clamp(3rem,8vw,7rem)] font-extrabold leading-[0.88] tracking-[-0.03em] text-white"
+            className="font-display text-[clamp(3rem,8vw,7rem)] font-extrabold leading-[0.88] tracking-[-0.03em] text-[var(--theme-text)]"
             stagger={0.025}
             duration={1.1}
             delay={0.3}

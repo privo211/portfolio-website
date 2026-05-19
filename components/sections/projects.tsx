@@ -15,7 +15,7 @@ function ProjectCard({ project }: { project: typeof featuredProjects[number] }) 
     <motion.article
       className={cn(
         'group relative flex flex-col overflow-hidden rounded-[1.75rem] p-8 sm:p-10 md:p-12 h-full',
-        'border border-white/[0.05] bg-gradient-to-br from-[#0D0D1A]/80 to-[#0A0A14]/80 backdrop-blur-sm',
+        'border border-[var(--theme-border)] dark:border-white/[0.05] bg-[var(--theme-bg-elevated)] dark:bg-gradient-to-br dark:from-[#0D0D1A]/80 dark:to-[#0A0A14]/80 backdrop-blur-sm',
         'hover:border-violet-500/20 hover:shadow-[0_0_50px_rgba(124,58,237,0.06)] transition-all duration-500'
       )}
       whileHover={{ y: -4 }}
@@ -108,7 +108,7 @@ export function Projects() {
                 <span className="font-mono text-[0.6rem] text-violet-400/70 uppercase tracking-[0.12em] font-semibold mb-2">
                   {project.subtitle}
                 </span>
-                <h4 className="font-display text-base font-bold text-white mb-2">
+                <h4 className="font-display text-base font-bold text-[var(--theme-text)] mb-2">
                   {project.title}
                 </h4>
                 <p className="text-[var(--theme-text-muted)] text-xs leading-relaxed mb-4 flex-1 line-clamp-2">
