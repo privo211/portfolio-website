@@ -25,7 +25,7 @@ export function Hero() {
       ref={containerRef}
       className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden section-padding"
     >
-      <div className="void-bg">
+      <div className="void-bg hidden dark:block">
         <div className="void-nebula" />
         <div className="void-stars" />
       </div>
@@ -40,7 +40,7 @@ export function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 1.2, duration: 0.8 }}
         >
-          <span className="inline-flex items-center gap-2 font-mono text-xs sm:text-sm text-cyan-400/80 tracking-[0.2em] uppercase">
+          <span className="inline-flex items-center gap-2 font-mono text-xs sm:text-sm text-[var(--theme-cyan-glow)] tracking-[0.2em] uppercase">
             <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.6)]" />
             {SITE_CONFIG.role}
           </span>
@@ -51,7 +51,7 @@ export function Hero() {
             as="h1"
             type="chars"
             trigger="load"
-            className="font-display text-[clamp(3.5rem,10vw,9rem)] font-extrabold leading-[0.88] tracking-[-0.03em] text-white text-glow"
+            className="font-display text-[clamp(3rem,8vw,7rem)] font-extrabold leading-[0.88] tracking-[-0.03em] text-white"
             stagger={0.025}
             duration={1.1}
           >
@@ -61,7 +61,7 @@ export function Hero() {
             as="h1"
             type="chars"
             trigger="load"
-            className="font-display text-[clamp(3.5rem,10vw,9rem)] font-extrabold leading-[0.88] tracking-[-0.03em] text-white text-glow"
+            className="font-display text-[clamp(3rem,8vw,7rem)] font-extrabold leading-[0.88] tracking-[-0.03em] text-white"
             stagger={0.025}
             duration={1.1}
             delay={0.3}
@@ -71,7 +71,7 @@ export function Hero() {
         </div>
 
         <motion.p
-          className="max-w-2xl text-base sm:text-lg md:text-xl text-white/50 leading-relaxed mb-6"
+          className="max-w-2xl text-base sm:text-lg md:text-xl text-[var(--theme-text-muted)] leading-relaxed mb-6"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.5, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
@@ -80,17 +80,17 @@ export function Hero() {
         </motion.p>
 
         <motion.div
-          className="flex flex-wrap items-center justify-center gap-3 text-sm text-white/40 mb-10"
+          className="flex flex-wrap items-center justify-center gap-3 text-sm text-[var(--theme-text-muted)] mb-10"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.7, duration: 0.6 }}
         >
-          <MapPin size={14} className="text-violet-400" />
+          <MapPin size={14} className="text-[var(--theme-accent)]" />
           <span>{SITE_CONFIG.location}</span>
           <span className="opacity-30">|</span>
           <span className="flex items-center gap-2">
             <span className="status-dot" />
-            Available for Full-Time
+            Open to work — Toronto, ON
           </span>
         </motion.div>
 

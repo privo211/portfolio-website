@@ -9,7 +9,7 @@ export function Education() {
   return (
     <section id="education" className="relative py-28 md:py-36 lg:py-44 section-padding">
       <div className="relative z-10 mx-auto max-w-6xl">
-        <SectionHeading title="Education" subtitle="academic foundation" />
+        <SectionHeading title="Education" subtitle="My education" />
 
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-8">
           <FadeIn>

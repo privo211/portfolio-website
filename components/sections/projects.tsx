@@ -77,7 +77,7 @@ export function Projects() {
   return (
     <section id="projects" className="relative py-28 md:py-36 lg:py-44 section-padding">
       <div className="relative z-10 mx-auto max-w-6xl">
-        <SectionHeading title="Featured Work" subtitle="artifact archive" />
+        <SectionHeading title="Featured Work" subtitle="What I've built" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
           {featuredProjects.map((project, i) => (

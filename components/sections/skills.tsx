@@ -18,7 +18,7 @@ export function Skills() {
   return (
     <section id="skills" className="relative py-28 md:py-36 lg:py-44 section-padding">
       <div className="relative z-10 mx-auto max-w-6xl">
-        <SectionHeading title="Tech Stack" subtitle="engineering bay" />
+        <SectionHeading title="Tech Stack" subtitle="Technologies I use" />
 
         <FadeIn className="mb-20 -mx-6 md:-mx-10 lg:-mx-16">
           <Marquee

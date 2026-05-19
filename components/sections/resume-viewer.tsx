@@ -14,7 +14,7 @@ export function ResumeViewer() {
   return (
     <section id="resume" className="relative py-28 md:py-36 lg:py-44 section-padding">
       <div className="relative z-10 mx-auto max-w-3xl">
-        <SectionHeading title="Resume" subtitle="data core" />
+        <SectionHeading title="Resume" subtitle="Full resume" />
 
         <FadeIn>
           <div className="glass-panel p-8 sm:p-10">

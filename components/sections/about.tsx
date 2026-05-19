@@ -15,7 +15,7 @@ export function About() {
       </div>
 
       <div className="relative z-10 mx-auto max-w-6xl">
-        <SectionHeading title="About Me" subtitle="mission briefing" />
+        <SectionHeading title="About Me" subtitle="Who I am" />
 
         <div className="grid grid-cols-1 lg:grid-cols-[320px_1fr] gap-12 lg:gap-16 items-start">
           <FadeIn direction="left">
@@ -31,39 +31,42 @@ export function About() {
                 />
               </div>
               <div className="text-center lg:text-left">
-                <p className="font-mono text-xs text-cyan-400/80">priyanshu.vora211@gmail.com</p>
-                <p className="font-mono text-xs text-white/30 mt-1">Toronto, ON · Canada</p>
+                <p className="font-mono text-xs text-[var(--theme-accent)]">priyanshu.vora211@gmail.com</p>
+                <p className="font-mono text-xs text-[var(--theme-text-muted)] opacity-60 mt-1">Toronto, ON · Canada</p>
               </div>
             </div>
           </FadeIn>
 
           <div className="space-y-8">
-            <TextReveal as="p" className="text-base sm:text-lg leading-relaxed text-white/75">
-              I&apos;m a software engineer who builds AI-powered automation that eliminates operational bottlenecks.
-              At Stokes Seeds, I built an OCR pipeline using Azure AI that slashed invoice processing by 90%,
-              and shipped 30+ ERP extensions that transformed inventory, sales, and purchasing workflows.
+            <TextReveal as="p" className="text-base sm:text-lg leading-relaxed text-[var(--theme-text)] opacity-90">
+              I&apos;m a software engineer who builds backend systems and automation that eliminate operational waste.
+              At Stokes Seeds, I built an OCR pipeline using Azure AI that cut invoice processing by 90%
+              and shipped 30+ ERP extensions across inventory, sales, and purchasing modules.
             </TextReveal>
 
-            <TextReveal as="p" className="text-base sm:text-lg leading-relaxed text-white/65">
-              Before that, I supported Ontario 511&apos;s CI/CD pipelines at the Ministry of Transportation
-              — infrastructure serving millions of drivers. I graduated from Brock University in December 2025
-              with First-Class Standing (GPA 3.7) and I&apos;m seeking a role where I can apply AI and engineering
-              to solve real business problems at scale.
+            <TextReveal as="p" className="text-base sm:text-lg leading-relaxed text-[var(--theme-text-muted)]">
+              During my co-op at Ontario&apos;s Ministry of Transportation, I supported CI/CD pipelines for the
+              Track My Plow platform and led AODA accessibility remediation across 10+ government web
+              applications. I graduated from Brock University in December 2025 with First-Class Standing
+              and am seeking full-time software engineering roles in Toronto.
             </TextReveal>
 
             <FadeIn delay={0.3}>
               <div className="grid grid-cols-3 gap-4 mt-8">
                 {[
-                  { value: '90%', label: 'Faster Invoice Processing', accent: 'text-violet-400' },
-                  { value: '30+', label: 'ERP Extensions Shipped', accent: 'text-cyan-400' },
-                  { value: '250+', label: 'Hours of Manual Work Saved', accent: 'text-violet-400' },
+                  { value: '90%', label: 'Invoice Processing Time Reduced', accent: 'text-[var(--theme-accent)]', sublabel: 'From 2 days to 4 hours' },
+                  { value: '30+', label: 'ERP Extensions Shipped', accent: 'text-[var(--theme-violet-bright)]', sublabel: 'Across inventory, sales, purchasing' },
+                  { value: '250+', label: 'Hours of Manual Work Saved', accent: 'text-[var(--theme-accent)]', sublabel: 'Through process automation' },
                 ].map((stat) => (
                   <div key={stat.label} className="glass-card p-5 sm:p-6 text-center">
                     <span className={`font-display text-3xl sm:text-4xl font-extrabold ${stat.accent}`}>
                       {stat.value}
                     </span>
-                    <p className="mt-2 text-xs sm:text-sm text-white/40 leading-snug">
+                    <p className="mt-2 text-xs sm:text-sm text-[var(--theme-text-muted)] leading-snug">
                       {stat.label}
+                    </p>
+                    <p className="mt-1 text-[0.65rem] text-[var(--theme-text-muted)] opacity-60">
+                      {stat.sublabel}
                     </p>
                   </div>
                 ))}
@@ -75,7 +78,7 @@ export function About() {
         <div className="mt-24">
           <Marquee
             items={allSkills}
-            className="text-4xl md:text-6xl font-bold text-white/[0.03] select-none"
+            className="text-4xl md:text-6xl font-bold text-[var(--theme-text-muted)] opacity-[0.04] select-none"
             speed={45}
           />
         </div>

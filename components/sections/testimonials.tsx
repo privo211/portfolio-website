@@ -12,7 +12,7 @@ export function Testimonials() {
   return (
     <section id="testimonials" className="relative py-28 md:py-36 lg:py-44 section-padding">
       <div className="relative z-10 mx-auto max-w-5xl">
-        <SectionHeading title="What People Say" subtitle="communications log" />
+        <SectionHeading title="What People Say" subtitle="What others say" />
 
         {featured && (
           <FadeIn className="mb-10">

@@ -36,7 +36,7 @@ export function Honors() {
   return (
     <section id="honors" className="relative py-28 md:py-36 lg:py-44 section-padding">
       <div className="relative z-10 mx-auto max-w-6xl">
-        <SectionHeading title="Honors & Awards" subtitle="recognition" />
+        <SectionHeading title="Honors & Awards" subtitle="Awards & honors" />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {honors.map((honor, i) => {
