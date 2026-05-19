@@ -1,0 +1,11 @@
+Next.js build: PASSED
+Command: npm run build
+Output:
+✓ Compiled successfully
+✓ Generating static pages (7/7)
+Route (app)                         Size  First Load JS
+┌ ○ /                             121 kB         246 kB
+├ ○ /_not-found                      0 B         125 kB
+├ ○ /robots.txt                      0 B            0 B
+└ ○ /sitemap.xml                     0 B            0 B
++ First Load JS shared by all     140 kB
