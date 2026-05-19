@@ -26,7 +26,7 @@ export function Education() {
                   <p className="text-white/70 text-base sm:text-lg font-medium mb-1">
                     {education.degree}
                   </p>
-                  <p className="text-white/35 text-sm mb-4">
+                  <p className="text-[var(--theme-text-muted)] opacity-60 text-sm mb-4">
                     {education.location} <span className="mx-2 opacity-30">·</span> {education.period}
                   </p>
 
@@ -51,7 +51,7 @@ export function Education() {
                       {education.coursework.map((course) => (
                         <span
                           key={course}
-                          className="inline-flex rounded-full bg-white/[0.03] border border-white/[0.06] px-3.5 py-1 text-xs text-white/40 hover:border-violet-500/30 hover:text-white/60 transition-all duration-300 cursor-default"
+                          className="inline-flex rounded-full bg-white/[0.03] border border-white/[0.06] px-3.5 py-1 text-xs text-[var(--theme-text-muted)] hover:border-violet-500/30 hover:text-white/60 transition-all duration-300 cursor-default"
                         >
                           {course}
                         </span>
@@ -83,14 +83,14 @@ export function Education() {
           </FadeIn>
 
           <FadeIn delay={0.15}>
-            <div className="glass-card p-8 h-full flex flex-col items-center justify-center text-center">
+            <div className="bg-[var(--theme-bg-subtle)] border border-[var(--theme-border)] rounded-xl p-8 h-full flex flex-col items-center justify-center text-center">
               <div className="w-16 h-16 rounded-full bg-violet-500/10 border-2 border-violet-500/25 flex items-center justify-center mb-5">
                 <span className="font-display text-xl font-bold text-violet-300">GPA</span>
               </div>
               <span className="font-display text-5xl sm:text-6xl font-extrabold text-white">
                 3.7
               </span>
-              <span className="text-xs text-white/30 mt-1">out of 4.0</span>
+              <span className="text-xs text-[var(--theme-text-muted)] opacity-50 mt-1">out of 4.0</span>
               <div className="mt-4 pt-4 border-t border-white/[0.06] w-full">
                 <p className="text-sm text-white/50">First-Class Standing</p>
                 <p className="text-sm text-white/50">Dean&apos;s Honour List Awardee</p>

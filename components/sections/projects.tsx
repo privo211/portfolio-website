@@ -42,7 +42,7 @@ function ProjectCard({ project }: { project: typeof featuredProjects[number] }) 
           {project.highlights.map((item, j) => (
             <li key={j} className="flex items-start gap-3">
               <span className="mt-[0.45rem] h-1.5 w-1.5 shrink-0 rounded-full bg-violet-500 shadow-[0_0_8px_rgba(139,92,246,0.5)]" />
-              <span className="text-white/45 text-sm leading-relaxed">{item}</span>
+              <span className="text-[var(--theme-text-muted)] text-sm leading-relaxed">{item}</span>
             </li>
           ))}
         </ul>
@@ -61,7 +61,7 @@ function ProjectCard({ project }: { project: typeof featuredProjects[number] }) 
               href={project.github}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-xs text-white/40 hover:text-violet-400 transition-colors"
+              className="inline-flex items-center gap-2 text-xs text-[var(--theme-text-muted)] hover:text-violet-400 transition-colors"
             >
               <GithubIcon size={16} />
               <span>View Source</span>
@@ -103,7 +103,7 @@ export function Projects() {
             {otherProjects.map((project) => (
               <div
                 key={project.id}
-                className="glass-card p-5 sm:p-6 flex flex-col"
+                className="bg-[var(--theme-bg-subtle)] border border-[var(--theme-border)] rounded-xl p-5 sm:p-6 flex flex-col"
               >
                 <span className="font-mono text-[0.6rem] text-violet-400/70 uppercase tracking-[0.12em] font-semibold mb-2">
                   {project.subtitle}
@@ -111,7 +111,7 @@ export function Projects() {
                 <h4 className="font-display text-base font-bold text-white mb-2">
                   {project.title}
                 </h4>
-                <p className="text-white/40 text-xs leading-relaxed mb-4 flex-1 line-clamp-2">
+                <p className="text-[var(--theme-text-muted)] text-xs leading-relaxed mb-4 flex-1 line-clamp-2">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-1.5 mt-auto">
