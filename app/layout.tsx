@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   description: SITE_CONFIG.description,
   keywords: [
     "Priyanshu Vora",
-    "Business Solutions Developer",
+    "Software Engineer",
     "Full Stack Developer",
     "Python",
     "TypeScript",
@@ -83,7 +83,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"

@@ -16,7 +16,7 @@ export const featuredProjects: Project[] = [
   {
     id: "invoice-ocr",
     title: "Vendor Invoice Processor",
-    subtitle: "AI-Powered ERP Automation Engine",
+    subtitle: "Intelligent Invoice Processing Pipeline",
     description:
       "Production-grade OCR pipeline that automates vendor invoice intake, extracting item-level data from diverse PDF formats and pushing directly into Microsoft Dynamics 365 Business Central — replacing 4 hours/day of manual data entry.",
     highlights: [
@@ -42,7 +42,7 @@ export const featuredProjects: Project[] = [
   {
     id: "resumex",
     title: "ResumeX",
-    subtitle: "AI-Powered Full-Stack Resume Builder",
+    subtitle: "ATS-Optimized Resume Builder",
     description:
       "Co-developed an AI-driven web app that helps users build tailored, ATS-friendly resumes with guided inputs, smart suggestions, and one-click export — built with the T3 Stack and integrated Stripe for premium tier payments.",
     highlights: [
@@ -75,7 +75,7 @@ export const otherProjects: Project[] = [
       "Conducted comprehensive research on leading video editing applications, analyzing features, user critiques, and synthesizing findings to design an AI-powered video editing interface prototype in Figma.",
     highlights: [
       "Led user persona creation based on survey responses, identifying primary demographics and pain points",
-      "Designed innovative features: AI-powered editing, preset templates, social media integration",
+      "Designed features: template-based editing, preset layouts, and social media integration",
     ],
     technologies: ["Figma", "HCI", "UX Research", "User Personas"],
     featured: false,
@@ -88,7 +88,7 @@ export const otherProjects: Project[] = [
       "Built a self-service Flask web application deployed on Debian Linux VM, letting 200+ employees generate branded email signatures with phone type and language options.",
     highlights: [
       "Deployed on Debian Linux VM, serving 200+ employees",
-      "Reduced IT overhead for signature management",
+      "Reduced IT overhead for signature management by eliminating manual email signature creation",
     ],
     technologies: ["Python", "Flask", "Debian Linux", "HTML/CSS"],
     featured: false,
@@ -114,7 +114,7 @@ export const otherProjects: Project[] = [
       "Designed and deployed API-enabled queries for sales invoices, stock data, and return receipts with custom date filtering, enabling automated data export to external analytics platforms.",
     highlights: [
       "Built OData API endpoints for NeoGrid integration",
-      "Enabled real-time data export to external analytics",
+      "Enabled automated data export to external analytics platforms for reporting",
     ],
     technologies: ["AL", "OData APIs", "Business Central", "NeoGrid"],
     featured: false,

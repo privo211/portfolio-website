@@ -13,8 +13,8 @@ export const skillCategories: SkillCategory[] = [
     name: "Languages",
     skills: [
       { name: "Python", level: "expert" },
-      { name: "TypeScript", level: "expert" },
-      { name: "JavaScript", level: "expert" },
+      { name: "TypeScript", level: "proficient" },
+      { name: "JavaScript", level: "proficient" },
       { name: "Java", level: "proficient" },
       { name: "SQL", level: "proficient" },
       { name: "C/C++", level: "familiar" },
@@ -38,7 +38,7 @@ export const skillCategories: SkillCategory[] = [
   {
     name: "Cloud & DevOps",
     skills: [
-      { name: "Microsoft Azure", level: "expert" },
+      { name: "Microsoft Azure", level: "proficient" },
       { name: "Azure AI Services", level: "expert" },
       { name: "CI/CD Pipelines", level: "proficient" },
       { name: "GitHub Actions", level: "familiar" },
@@ -62,8 +62,7 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       { name: "MS Dynamics 365 BC", level: "expert" },
       { name: "AL (Dynamics Extensions)", level: "expert" },
-      { name: "Power Automate", level: "expert" },
-      { name: "OCR / AI Pipelines", level: "expert" },
+      { name: "Power Automate", level: "proficient" },
       { name: "ETL", level: "proficient" },
       { name: "Agile / Scrum", level: "proficient" },
     ],
@@ -71,7 +70,6 @@ export const skillCategories: SkillCategory[] = [
   {
     name: "Developer Tools",
     skills: [
-      { name: "VS Code", level: "expert" },
       { name: "Git", level: "proficient" },
       { name: "IntelliJ", level: "familiar" },
       { name: "SharePoint", level: "proficient" },

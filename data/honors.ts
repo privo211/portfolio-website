@@ -28,13 +28,4 @@ export const honors: Honor[] = [
       "Graduated with First-Class Standing, recognizing outstanding academic achievement with a GPA of 3.7 across the 4-year Honours Computer Science program.",
     tier: "platinum",
   },
-  {
-    id: "gpa",
-    title: "GPA 3.7 / 4.0",
-    issuer: "Brock University",
-    date: "2021 — 2025",
-    description:
-      "Maintained a high cumulative GPA throughout the Computer Science program while working part-time throughout most semesters.",
-    tier: "gold",
-  },
 ];
