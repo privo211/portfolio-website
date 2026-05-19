@@ -21,9 +21,12 @@ export function Testimonials() {
 
               <div className="relative z-10">
                 <div className="flex items-center gap-1.5 mb-6">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} size={14} className="fill-amber-400 text-amber-400" />
-                  ))}
+                  {(() => {
+                    const starCount = Math.round(parseFloat(featured.rating || '') || 4)
+                    return [...Array(5)].map((_, i) => (
+                      <Star key={i} size={14} className={i < starCount ? 'fill-amber-400 text-amber-400' : 'fill-zinc-700 text-zinc-700'} />
+                    ))
+                  })()}
                   <span className="ml-2 font-mono text-[0.6rem] text-amber-400/70 uppercase tracking-[0.1em]">
                     {featured.rating}
                   </span>
@@ -60,13 +63,16 @@ export function Testimonials() {
             <FadeIn key={testimonial.id} delay={i * 0.1}>
               <div className="glass-card p-7 flex flex-col">
                 <div className="flex items-center gap-1 mb-4">
-                  {[...Array(5)].map((_, j) => (
-                    <Star
-                      key={j}
-                      size={12}
-                      className={j < 4 ? 'fill-amber-400 text-amber-400' : 'fill-zinc-700 text-zinc-700'}
-                    />
-                  ))}
+                  {(() => {
+                    const starCount = Math.round(parseFloat(testimonial.rating || '') || 4)
+                    return [...Array(5)].map((_, j) => (
+                      <Star
+                        key={j}
+                        size={12}
+                        className={j < starCount ? 'fill-amber-400 text-amber-400' : 'fill-zinc-700 text-zinc-700'}
+                      />
+                    ))
+                  })()}
                   <span className="ml-2 font-mono text-[0.55rem] text-[var(--theme-text-muted)] opacity-40 uppercase tracking-[0.08em]">
                     {testimonial.rating}
                   </span>
