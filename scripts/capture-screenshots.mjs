@@ -194,68 +194,57 @@ async function captureAllScreenshots(page, viewportName, viewport) {
   await page.goto(BASE_URL, { waitUntil: "networkidle", timeout: 60_000 });
   await dismissPreloader(page);
 
-  // Kill Lenis smooth-scroll so native scroll works for screenshots
-  await disableLenisForScreenshots(page);
-
-  // Let all on-load GSAP/motion animations finish
+  // Leave Lenis active so ScrollTrigger works normally
+  // Let initial animations finish
   await sleep(2000);
 
   const captures = [];
+  
+  // Get total height of the page
+  const bodyHeight = await page.evaluate(() => document.body.scrollHeight);
+  const viewportHeight = viewport.height;
+  
+  let currentScrollY = 0;
+  let step = 0;
 
-  // 1. Full-page screenshot (entire scrollable height)
-  const fullPagePath = outputPath(viewportName, "full-page");
-  await page.screenshot({ path: fullPagePath, fullPage: true });
-  console.log(`  ✓ Full-page screenshot saved`);
+  console.log(`  Scrolling down page (Total height: ${bodyHeight})...`);
 
-  // 2. Per-section: element screenshot + viewport screenshot
-  for (const section of SECTIONS) {
-    const sectionEl = page.locator(`#${section.id}`);
+  while (currentScrollY < bodyHeight) {
+    // Scroll to current position
+    await page.evaluate((y) => window.scrollTo(0, y), currentScrollY);
+    
+    // Wait for GSAP ScrollTriggers and Lenis to settle
+    await sleep(1500);
 
-    // Scroll section into view
-    await scrollToSection(page, section.id);
-
-    // --- Element screenshot (the section itself) ---
-    let elPath = "";
-    try {
-      await sectionEl.waitFor({ state: "attached", timeout: 5_000 });
-      elPath = outputPath(viewportName, section.id);
-      await sectionEl.screenshot({ path: elPath });
-      console.log(`  ✓ [${section.label}] Element`);
-    } catch (e) {
-      console.log(`  ✗ [${section.label}] Element: ${e.message}`);
-      continue;
-    }
-
-    // --- Viewport screenshot (what user actually sees) ---
-    let vpPath = "";
-    try {
-      vpPath = outputPath(viewportName, section.id, "viewport");
-      await page.screenshot({ path: vpPath, fullPage: false });
-      console.log(`     Viewport saved`);
-    } catch (e) {
-      console.log(`     Viewport failed: ${e.message}`);
-    }
-
+    const vpPath = outputPath(viewportName, `scroll-step-${step}`);
+    await page.screenshot({ path: vpPath, fullPage: false });
+    console.log(`  ✓ Captured step ${step} at Y=${currentScrollY}`);
+    
     captures.push({
-      section: section.id,
-      label: section.label,
+      section: `step-${step}`,
+      label: `Scroll Step ${step}`,
       viewport: viewportName,
       viewportDims: `${viewport.width}x${viewport.height}`,
-      elementPath: elPath,
-      viewportPath: vpPath || elPath,
-      fullPagePath,
+      elementPath: vpPath,
+      viewportPath: vpPath,
+      fullPagePath: vpPath,
     });
+
+    currentScrollY += Math.floor(viewportHeight * 0.8); // Overlap slightly
+    step++;
+    
+    // Break if we've reached or passed the bottom
+    if (currentScrollY + viewportHeight >= bodyHeight + viewportHeight * 0.8) {
+        break;
+    }
   }
 
-  // 3. Overflow / horizontal scroll detection screenshot
-  //    Force body to be wider than viewport to expose overflow
-  const origWidth = viewport.width;
-  await page.setViewportSize({ width: 2560, height: viewport.height });
-  await sleep(500);
-  const overflowPath = outputPath(viewportName, "overflow-check");
-  await page.screenshot({ path: overflowPath, fullPage: true });
-  await page.setViewportSize({ width: origWidth, height: viewport.height });
-  console.log("  ✓ Overflow-check screenshot saved");
+  // Final screenshot at the absolute bottom just in case
+  await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+  await sleep(1500);
+  const vpPath = outputPath(viewportName, `scroll-step-bottom`);
+  await page.screenshot({ path: vpPath, fullPage: false });
+  console.log(`  ✓ Captured bottom`);
 
   return captures;
 }
