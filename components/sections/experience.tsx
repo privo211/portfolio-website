@@ -33,7 +33,7 @@ export function Experience() {
   const workExperiences = experiences.filter((e) => e.type === 'work')
 
   return (
-    <section id="experience" className="relative py-28 md:py-36 lg:py-44 section-padding">
+    <section id="experience" className="relative py-20 md:py-28 lg:py-32 section-padding">
       <div className="relative z-10 mx-auto max-w-3xl">
         <SectionHeading title="Experience" subtitle="Where I've worked" />
 

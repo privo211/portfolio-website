@@ -17,7 +17,7 @@ export function TextReveal({
 }: TextRevealProps) {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const words = children.split(" ");
+  const words = children.split(" ").filter(Boolean);
 
   useGSAP(
     () => {
@@ -50,8 +50,8 @@ export function TextReveal({
       className={className}
     >
       {words.map((word, i) => (
-        <span key={i} className="reveal-word inline">
-          {word}{i < words.length - 1 ? " " : ""}
+        <span key={i} className="reveal-word" style={{ display: "inline-block", marginRight: "0.3em" }}>
+          {word}
         </span>
       ))}
     </Tag>

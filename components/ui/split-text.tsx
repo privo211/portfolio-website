@@ -30,15 +30,15 @@ export function SplitText({
   const elements = useMemo(() => {
     if (type === "chars") {
       return children.split("").map((char, i) => (
-        <span key={i} className="inline-block split-char" style={{ opacity: 0, transform: "translateY(100%)" }}>
+        <span key={i} className="inline-block split-char" style={{ opacity: 0, transform: "translateY(100%)", willChange: "transform, opacity" }}>
           {char === " " ? "\u00A0" : char}
         </span>
       ));
     }
-    const wordArray = children.split(" ");
+    const wordArray = children.split(" ").filter(Boolean);
     return wordArray.map((word, i) => (
-      <span key={i} className="inline-block overflow-hidden" style={{ marginRight: i < wordArray.length - 1 ? "0.3em" : 0 }}>
-        <span className="inline-block split-word" style={{ opacity: 0, transform: "translateY(100%)" }}>
+      <span key={i} className="inline-block overflow-hidden split-word-wrapper" style={{ marginRight: i < wordArray.length - 1 ? "0.3em" : 0 }}>
+        <span className="inline-block split-word" style={{ opacity: 0, transform: "translateY(100%)", willChange: "transform, opacity" }}>
           {word}
         </span>
       </span>

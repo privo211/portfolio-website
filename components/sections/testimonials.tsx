@@ -10,7 +10,7 @@ export function Testimonials() {
   const others = testimonials.filter((t) => !t.featured)
 
   return (
-    <section id="testimonials" className="relative py-28 md:py-36 lg:py-44 section-padding">
+    <section id="testimonials" className="relative py-20 md:py-28 lg:py-32 section-padding">
       <div className="relative z-10 mx-auto max-w-5xl">
         <SectionHeading title="What People Say" subtitle="What others say" />
 

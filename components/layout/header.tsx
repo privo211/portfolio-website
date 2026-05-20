@@ -55,7 +55,7 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 aria-current={isActive ? 'page' : undefined}
-                className={`text-[0.8rem] px-3 py-1.5 rounded-full transition-all duration-200 ${
+                className={`text-[0.75rem] px-3 py-1.5 rounded-full transition-all duration-200 ${
                   isActive
                     ? 'text-[var(--theme-accent)] bg-[var(--theme-accent-glow)]'
                     : 'text-[var(--theme-text-muted)] hover:text-[var(--theme-text)] hover:bg-[var(--theme-border)]'

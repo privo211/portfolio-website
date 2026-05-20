@@ -4,11 +4,11 @@ import { motion } from 'motion/react'
 import { SplitText } from '@/components/ui/split-text'
 import { MagneticButton } from '@/components/ui/magnetic-button'
 import { SOCIAL_LINKS, SITE_CONFIG } from '@/lib/constants'
-import { Mail } from 'lucide-react'
+import { Mail, Calendar } from 'lucide-react'
 
 export function Contact() {
   return (
-    <section id="contact" className="relative py-32 md:py-44 lg:py-56 section-padding">
+    <section id="contact" className="relative py-20 md:py-28 lg:py-32 section-padding">
       <div className="absolute inset-0 pointer-events-none flex items-center justify-center">
         <div className="w-[500px] h-[500px] rounded-full bg-violet-600/[0.03] blur-[120px]" />
       </div>
@@ -22,15 +22,15 @@ export function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          Available now
+          Available for full-time roles
         </motion.span>
 
         <SplitText
           as="h2"
           type="words"
-          className="font-display text-[clamp(2rem,6vw,5rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[var(--theme-text)] mb-8"
+          className="font-display text-[clamp(2rem,5vw,4rem)] font-bold leading-[1.05] tracking-[-0.02em] text-[var(--theme-text)] mb-8"
         >
-          Let&apos;s Work Together
+          Let's Work Together
         </SplitText>
 
         <motion.p
@@ -40,8 +40,7 @@ export function Contact() {
           viewport={{ once: true }}
           transition={{ delay: 0.15 }}
         >
-          Currently seeking full-time Software Engineer roles in Toronto.
-          Open to on-site, hybrid, or remote. Let&apos;s talk.
+          I'm seeking full-time Software Engineer roles in Toronto. Open to on-site, hybrid, or remote.
         </motion.p>
 
         <motion.div
@@ -56,7 +55,17 @@ export function Contact() {
             className="btn-primary !rounded-full !px-7 !py-3.5 !text-base"
           >
             <Mail size={18} />
-            Say Hello
+            Get in Touch
+          </MagneticButton>
+
+          <MagneticButton
+            href="https://calendly.com/priyanshuvora"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-outline !rounded-full !px-7 !py-3.5 !text-base"
+          >
+            <Calendar size={18} />
+            Schedule a Call
           </MagneticButton>
         </motion.div>
 

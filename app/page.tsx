@@ -6,12 +6,11 @@ import { Footer } from "@/components/layout/footer";
 import { Preloader } from "@/components/layout/preloader";
 import { Hero } from "@/components/sections/hero";
 import { About } from "@/components/sections/about";
+import { Skills } from "@/components/sections/skills";
 import { Experience } from "@/components/sections/experience";
 import { Projects } from "@/components/sections/projects";
 import { Education } from "@/components/sections/education";
 import { Testimonials } from "@/components/sections/testimonials";
-import { Skills } from "@/components/sections/skills";
-import { ResumeViewer } from "@/components/sections/resume-viewer";
 import { Contact } from "@/components/sections/contact";
 
 export default function Home() {
@@ -23,12 +22,11 @@ export default function Home() {
       <main id="main-content">
         <Hero />
         <About />
+        <Skills />
         <Experience />
         <Projects />
         <Education />
         <Testimonials />
-        <Skills />
-        <ResumeViewer />
         <Contact />
       </main>
       <Footer />

@@ -4,7 +4,7 @@ import { motion } from 'motion/react'
 import { SectionHeading } from '@/components/ui/section-heading'
 import { FadeIn } from '@/components/animations/fade-in'
 import { useCursor } from '@/components/providers/cursor-provider'
-import { featuredProjects, otherProjects } from '@/data/projects'
+import { featuredProjects } from '@/data/projects'
 import { GithubIcon } from '@/components/ui/icons'
 import { cn } from '@/lib/utils'
 
@@ -15,8 +15,8 @@ function ProjectCard({ project }: { project: typeof featuredProjects[number] }) 
     <motion.article
       className={cn(
         'group relative flex flex-col overflow-hidden rounded-[1.75rem] p-8 sm:p-10 md:p-12 h-full',
-        'border border-[var(--theme-border)] dark:border-white/[0.05] bg-[var(--theme-bg-elevated)] dark:bg-gradient-to-br dark:from-[#0D0D1A]/80 dark:to-[#0A0A14]/80 backdrop-blur-sm',
-        'hover:border-violet-500/20 hover:shadow-[0_0_50px_rgba(124,58,237,0.06)] transition-all duration-500'
+        'border border-[var(--theme-border)] bg-[var(--theme-bg-elevated)]',
+        'hover:border-[var(--theme-accent)]/30 hover:shadow-[0_4px_32px_var(--theme-accent-glow)] transition-all duration-300'
       )}
       whileHover={{ y: -4 }}
       transition={{ type: 'spring', stiffness: 300, damping: 20 }}
@@ -30,11 +30,11 @@ function ProjectCard({ project }: { project: typeof featuredProjects[number] }) 
           {project.subtitle}
         </span>
 
-        <h3 className="text-2xl sm:text-3xl font-display font-bold tracking-tight text-white mb-5">
+        <h3 className="text-2xl sm:text-3xl font-display font-bold tracking-tight text-[var(--theme-text)] mb-5">
           {project.title}
         </h3>
 
-        <p className="text-white/50 leading-relaxed text-sm sm:text-base mb-8">
+        <p className="text-[var(--theme-text-muted)] leading-relaxed text-sm sm:text-base mb-8">
           {project.description}
         </p>
 
@@ -47,7 +47,7 @@ function ProjectCard({ project }: { project: typeof featuredProjects[number] }) 
           ))}
         </ul>
 
-        <div className="mt-10 pt-8 border-t border-white/[0.05]">
+        <div className="mt-10 pt-8 border-t border-[var(--theme-border)]">
           <div className="flex flex-wrap gap-2 mb-6">
             {project.technologies.map((tech) => (
               <span key={tech} className="pill pill-familiar text-[0.65rem]">
@@ -64,7 +64,7 @@ function ProjectCard({ project }: { project: typeof featuredProjects[number] }) 
               className="inline-flex items-center gap-2 text-xs text-[var(--theme-text-muted)] hover:text-violet-400 transition-colors"
             >
               <GithubIcon size={16} />
-              <span>View Source</span>
+              <span>View on GitHub</span>
             </a>
           )}
         </div>
@@ -75,61 +75,21 @@ function ProjectCard({ project }: { project: typeof featuredProjects[number] }) 
 
 export function Projects() {
   return (
-    <section id="projects" className="relative py-28 md:py-36 lg:py-44 section-padding">
+    <section id="projects" className="relative py-20 md:py-28 lg:py-32 section-padding">
       <div className="relative z-10 mx-auto max-w-6xl">
         <SectionHeading title="Featured Work" subtitle="What I've built" />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {featuredProjects.map((project, i) => (
             <FadeIn
               key={project.id}
-              delay={i * 0.15}
+              delay={i * 0.1}
               className={project.gridSpan === 'large' ? 'md:col-span-2' : ''}
             >
               <ProjectCard project={project} />
             </FadeIn>
           ))}
         </div>
-
-        <FadeIn>
-          <div className="mb-8">
-            <h3 className="font-mono text-xs text-cyan-400/70 uppercase tracking-[0.15em] font-medium flex items-center gap-2">
-              <span className="w-1 h-1 rounded-full bg-cyan-400" />
-              Additional projects
-            </h3>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {otherProjects.map((project) => (
-              <div
-                key={project.id}
-                className="bg-[var(--theme-bg-subtle)] border border-[var(--theme-border)] rounded-xl p-5 sm:p-6 flex flex-col"
-              >
-                <span className="font-mono text-[0.6rem] text-violet-400/70 uppercase tracking-[0.12em] font-semibold mb-2">
-                  {project.subtitle}
-                </span>
-                <h4 className="font-display text-base font-bold text-[var(--theme-text)] mb-2">
-                  {project.title}
-                </h4>
-                <p className="text-[var(--theme-text-muted)] text-xs leading-relaxed mb-4 flex-1 line-clamp-2">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-1.5 mt-auto">
-                  {project.technologies.slice(0, 3).map((tech) => (
-                    <span key={tech} className="pill pill-familiar text-[0.6rem] !px-2 !py-0.5">
-                      {tech}
-                    </span>
-                  ))}
-                  {project.technologies.length > 3 && (
-                    <span className="pill pill-familiar text-[0.6rem] !px-2 !py-0.5">
-                      +{project.technologies.length - 3}
-                    </span>
-                  )}
-                </div>
-              </div>
-            ))}
-          </div>
-        </FadeIn>
       </div>
     </section>
   )

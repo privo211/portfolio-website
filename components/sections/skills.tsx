@@ -7,7 +7,7 @@ import { skillCategories } from '@/data/skills'
 
 export function Skills() {
   return (
-    <section id="skills" className="relative py-28 md:py-36 lg:py-44 section-padding">
+    <section id="skills" className="relative py-20 md:py-28 lg:py-32 section-padding">
       <div className="relative z-10 mx-auto max-w-6xl">
         <SectionHeading title="Tech Stack" subtitle="Technologies I use" />
 

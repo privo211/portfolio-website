@@ -3,9 +3,9 @@ export const SITE_CONFIG = {
   title: "Priyanshu Vora | Software Engineer",
   description:
     "Priyanshu Vora — Software Engineer specializing in enterprise automation, backend systems, and full-stack development. Recent CS graduate from Brock University (GPA 3.7).",
-  url: "https://privo211.github.io/priyanshu-portfolio",
+  url: "https://priyanshu-vora.vercel.app",
   tagline:
-    "Full-stack engineer specializing in enterprise automation and backend systems — I build tools that eliminate operational waste and ship measurable results.",
+    "I build automation that saves enterprises thousands of hours — OCR pipelines, ERP integrations, and backend systems that ship measurable results.",
   role: "Software Engineer",
   location: "Toronto, ON, Canada",
   email: "priyanshu.vora211@gmail.com",
@@ -18,25 +18,19 @@ export const SOCIAL_LINKS = {
 
 export const NAV_ITEMS = [
   { label: "About", href: "#about" },
-  { label: "Experience", href: "#experience" },
-  { label: "Projects", href: "#projects" },
-  { label: "Education", href: "#education" },
-  { label: "Honors", href: "#honors" },
-  { label: "Testimonials", href: "#testimonials" },
   { label: "Skills", href: "#skills" },
-  { label: "Resume", href: "#resume" },
+  { label: "Experience", href: "#experience" },
+  { label: "Work", href: "#projects" },
   { label: "Contact", href: "#contact" },
 ] as const;
 
 export const SECTION_IDS = {
   hero: "hero",
   about: "about",
+  skills: "skills",
   experience: "experience",
   projects: "projects",
   education: "education",
-  honors: "honors",
   testimonials: "testimonials",
-  skills: "skills",
-  resume: "resume",
   contact: "contact",
 } as const;
