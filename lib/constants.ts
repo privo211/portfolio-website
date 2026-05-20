@@ -7,8 +7,9 @@ export const SITE_CONFIG = {
   tagline:
     "I build automation that saves enterprises thousands of hours — OCR pipelines, ERP integrations, and backend systems that ship measurable results.",
   role: "Software Engineer",
-  location: "Toronto, ON, Canada",
+  location: "St. Catharines, ON, Canada",
   email: "priyanshu.vora211@gmail.com",
+  phone: "+1 (289)-547-5358",
 } as const;
 
 export const SOCIAL_LINKS = {
@@ -18,19 +19,11 @@ export const SOCIAL_LINKS = {
 
 export const NAV_ITEMS = [
   { label: "About", href: "#about" },
+  { label: "Work", href: "#work" },
+  { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
-  { label: "Work", href: "#projects" },
+  { label: "Education", href: "#education" },
+  { label: "Testimonials", href: "#testimonials" },
   { label: "Contact", href: "#contact" },
 ] as const;
-
-export const SECTION_IDS = {
-  hero: "hero",
-  about: "about",
-  skills: "skills",
-  experience: "experience",
-  projects: "projects",
-  education: "education",
-  testimonials: "testimonials",
-  contact: "contact",
-} as const;

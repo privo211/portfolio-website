@@ -1,32 +1,17 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, JetBrains_Mono, Syne } from "next/font/google";
-import { Providers } from "@/components/providers";
-import { SITE_CONFIG, SOCIAL_LINKS } from "@/lib/constants";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+const inter = Inter({
   subsets: ["latin"],
-  display: "swap",
-});
-
-// Modern, bold, geometric font for your name - perfect for hero sections
-const syne = Syne({
-  variable: "--font-syne",
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["400", "500", "600", "700", "800"],
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  variable: "--font-jetbrains-mono",
-  subsets: ["latin"],
+  variable: "--font-inter",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: SITE_CONFIG.title,
-  description: SITE_CONFIG.description,
+  title: "Priyanshu Vora | Software Engineer",
+  description:
+    "Priyanshu Vora — Software Engineer specializing in enterprise automation, backend systems, and full-stack development. Recent CS graduate from Brock University (GPA 3.7).",
   keywords: [
     "Priyanshu Vora",
     "Software Engineer",
@@ -37,35 +22,46 @@ export const metadata: Metadata = {
     "Azure",
     "Portfolio",
   ],
-  authors: [{ name: SITE_CONFIG.name }],
-  metadataBase: new URL(SITE_CONFIG.url),
+  authors: [{ name: "Priyanshu Vora" }],
+  metadataBase: new URL("https://priyanshu-vora.vercel.app"),
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: SITE_CONFIG.url,
-    title: SITE_CONFIG.title,
-    description: SITE_CONFIG.tagline,
-    siteName: SITE_CONFIG.name,
+    url: "https://priyanshu-vora.vercel.app",
+    title: "Priyanshu Vora | Software Engineer",
+    description:
+      "I build automation that saves enterprises thousands of hours — OCR pipelines, ERP integrations, and backend systems that ship measurable results.",
+    siteName: "Priyanshu Vora",
   },
   twitter: {
     card: "summary_large_image",
-    title: SITE_CONFIG.title,
-    description: SITE_CONFIG.tagline,
+    title: "Priyanshu Vora | Software Engineer",
+    description:
+      "I build automation that saves enterprises thousands of hours — OCR pipelines, ERP integrations, and backend systems that ship measurable results.",
   },
-  robots: {
-    index: true,
-    follow: true,
+  robots: { index: true, follow: true },
+  icons: {
+    icon: [
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
   },
+  manifest: "/site.webmanifest",
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
-  name: SITE_CONFIG.name,
-  jobTitle: SITE_CONFIG.role,
-  url: SITE_CONFIG.url,
-  email: SITE_CONFIG.email,
-  sameAs: [SOCIAL_LINKS.github, SOCIAL_LINKS.linkedin],
+  name: "Priyanshu Vora",
+  jobTitle: "Software Engineer",
+  url: "https://priyanshu-vora.vercel.app",
+  email: "priyanshu.vora211@gmail.com",
+  sameAs: [
+    "https://github.com/privo211",
+    "https://www.linkedin.com/in/priyanshuvora/",
+  ],
   address: {
     "@type": "PostalAddress",
     addressRegion: "Ontario",
@@ -79,24 +75,19 @@ const jsonLd = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning className="dark">
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body
-        className={`${spaceGrotesk.variable} ${syne.variable} ${jetbrainsMono.variable} antialiased`}
-      >
-        <a href="#main-content" className="skip-to-content">
-          Skip to content
-        </a>
-        <Providers>{children}</Providers>
+      <body className={`${inter.variable} font-sans antialiased`}>
+        {children}
       </body>
     </html>
   );
