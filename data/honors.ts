@@ -13,7 +13,7 @@ export const honors: Honor[] = [
     id: "deans-list",
     title: "Dean's Honour List",
     issuer: "Brock University",
-    date: "2021 — 2025",
+    date: "2021 - 2025",
     description:
       "Awarded to students achieving a minimum 80% overall average across all courses. Recognized for sustained academic excellence throughout the Computer Science program.",
     tier: "gold",

@@ -10,13 +10,18 @@ export interface Project {
   image?: string;
   featured: boolean;
   gridSpan?: "large" | "tall" | "default";
+  architecture?: string[];
+  pipeline?: string[];
+  outcomes?: string[];
+  gallery?: string[];
+  youtubeEmbed?: string;
 }
 
 export const featuredProjects: Project[] = [
   {
     id: "invoice-ocr",
-    title: "Vendor Invoice Processor",
-    subtitle: "Intelligent Invoice Processing Pipeline",
+    title: "DocFlow",
+    subtitle: "Intelligent Document Processing Engine",
     description:
       "Production-grade invoice processing platform integrating OCR, regex parsing, REST APIs, and automated reconciliation workflows for high-volume ERP invoice intake.",
     highlights: [
@@ -34,10 +39,14 @@ export const featuredProjects: Project[] = [
       "PostgreSQL",
       "PyMuPDF",
     ],
-    image: "/projects/invoice-ocr.png",
+    image: "/projects/docflow-2.jpg",
+    gallery: ["/projects/docflow-1.png", "/projects/docflow-2.jpg"],
     github: "https://github.com/privo211/invoice-ocr",
     featured: true,
     gridSpan: "large",
+    architecture: ["Python/Flask REST API layer", "Azure AI Document Intelligence for OCR extraction", "PostgreSQL for structured data storage", "MS Dynamics 365 Business Central integration via REST APIs"],
+    pipeline: ["PDF ingestion and preprocessing with PyMuPDF", "Azure AI layout analysis and field extraction", "Vendor-specific regex pattern matching", "Fuzzy reconciliation against ERP quality reports", "Flask admin dashboard for manual review and exception handling"],
+    outcomes: ["87% reduction in processing time (2 days to under 4 hours)", "200+ invoices processed daily across 6 suppliers", "250+ hours saved annually in manual data entry", "94% reduction in manual error rates"],
   },
   {
     id: "resumex",
@@ -59,7 +68,9 @@ export const featuredProjects: Project[] = [
       "FastAPI",
       "PostgreSQL",
     ],
-    image: "/projects/resumex.png",
+    image: "/projects/resumex-cover.jpg",
+    gallery: ["/projects/resumex-cover.jpg", "/projects/resumex-demo.png"],
+    youtubeEmbed: "uSg_ZD70cC4",
     github: "https://github.com/RohittPillai/COSC-4P02-PROJECT",
     featured: true,
     gridSpan: "tall",
@@ -76,6 +87,8 @@ export const featuredProjects: Project[] = [
     ],
     technologies: ["UI/UX Research", "Figma", "Prototyping", "User Testing"],
     live: "https://www.figma.com/proto/f2UjdB5V3lfIWE5TfonHYx/Flick---Video-Editing-Interface---Final-Edit?node-id=1-14&t=rkh3rRdHbKWwoqus-1",
+    image: "/projects/flick-cover.png",
+    gallery: ["/projects/flick-cover.png", "/projects/flick-figma.png"],
     featured: true,
     gridSpan: "default",
   },

@@ -12,7 +12,7 @@ export const education: Education = {
   degree: "Bachelor of Science (Honours), Computer Science",
   school: "Brock University",
   location: "St. Catharines, ON",
-  period: "May 2021 — Dec 2025",
+  period: "May 2021 - Dec 2025",
   gpa: "3.7 / 4.0",
   honors: [
     "First-Class Standing",

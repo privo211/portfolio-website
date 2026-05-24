@@ -2,12 +2,12 @@ export const SITE_CONFIG = {
   name: "Priyanshu Vora",
   title: "Priyanshu Vora | Software Engineer",
   description:
-    "Priyanshu Vora — Software Engineer specializing in enterprise automation, backend systems, and full-stack development. Recent CS graduate from Brock University (GPA 3.7).",
+    "Priyanshu Vora, AI-first Software Engineer. I find bottlenecks, build automation, and ship measurable impact across teams. Recent CS graduate from Brock University (GPA 3.7).",
   url: "https://priyanshu-vora.vercel.app",
   tagline:
-    "I build automation that saves enterprises thousands of hours — OCR pipelines, ERP integrations, and backend systems that ship measurable results.",
-  role: "Software Engineer",
-  location: "St. Catharines, ON, Canada",
+    "I'm an AI-first engineer who embeds into teams, diagnoses bottlenecks, and builds automation that transforms how organizations operate.",
+  role: "Junior AI Engineer & Forward Deployed Engineer",
+  location: "Ontario, Canada",
   email: "priyanshu.vora211@gmail.com",
   phone: "+1 (289)-547-5358",
 } as const;
@@ -19,10 +19,9 @@ export const SOCIAL_LINKS = {
 
 export const NAV_ITEMS = [
   { label: "About", href: "#about" },
-  { label: "Work", href: "#work" },
-  { label: "Projects", href: "#projects" },
-  { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
+  { label: "Work", href: "#work" },
+  { label: "Skills", href: "#skills" },
   { label: "Education", href: "#education" },
   { label: "Testimonials", href: "#testimonials" },
   { label: "Contact", href: "#contact" },

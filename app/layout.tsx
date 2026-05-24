@@ -11,7 +11,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Priyanshu Vora | Software Engineer",
   description:
-    "Priyanshu Vora — Software Engineer specializing in enterprise automation, backend systems, and full-stack development. Recent CS graduate from Brock University (GPA 3.7).",
+    "Priyanshu Vora, AI-first Software Engineer. I find bottlenecks, build automation, and ship measurable impact across teams. Recent CS graduate from Brock University (GPA 3.7).",
   keywords: [
     "Priyanshu Vora",
     "Software Engineer",
@@ -30,14 +30,14 @@ export const metadata: Metadata = {
     url: "https://priyanshu-vora.vercel.app",
     title: "Priyanshu Vora | Software Engineer",
     description:
-      "I build automation that saves enterprises thousands of hours — OCR pipelines, ERP integrations, and backend systems that ship measurable results.",
+      "I build automation that saves enterprises thousands of hours, OCR pipelines, ERP integrations, and backend systems that ship measurable results.",
     siteName: "Priyanshu Vora",
   },
   twitter: {
     card: "summary_large_image",
     title: "Priyanshu Vora | Software Engineer",
     description:
-      "I build automation that saves enterprises thousands of hours — OCR pipelines, ERP integrations, and backend systems that ship measurable results.",
+      "I build automation that saves enterprises thousands of hours, OCR pipelines, ERP integrations, and backend systems that ship measurable results.",
   },
   robots: { index: true, follow: true },
   icons: {

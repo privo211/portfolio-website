@@ -15,7 +15,7 @@ export const experiences: Experience[] = [
     role: "Business Solutions Developer",
     company: "Stokes Seeds Ltd.",
     location: "Thorold, ON",
-    period: "Sep 2024 — Present",
+    period: "Sep 2024 - Present",
     type: "work",
     description: [
       "Designed and shipped 30+ Business Central workflow and interface enhancements, developing scalable UI components, validations, and automation tools that reduced manual error rates by 94%.",
@@ -39,7 +39,7 @@ export const experiences: Experience[] = [
     role: "IT Systems Analyst & Developer",
     company: "Stokes Seeds Ltd.",
     location: "Thorold, ON",
-    period: "May 2024 — Aug 2024",
+    period: "May 2024 - Aug 2024",
     type: "work",
     description: [
       "Developed and deployed a full-stack Flask web application on Debian Linux, enabling 200 employees to generate multilingual email signatures through a responsive self-service interface.",
@@ -53,7 +53,7 @@ export const experiences: Experience[] = [
     role: "Junior Technical Analyst (Co-op)",
     company: "Ontario Ministry of Transportation",
     location: "St. Catharines, ON",
-    period: "Sep 2023 — Dec 2023",
+    period: "Sep 2023 - Dec 2023",
     type: "work",
     description: [
       "Integrated Python automation scripts into Azure DevOps CI/CD pipelines for Ontario 511 Track My Plow, improving deployment reliability and streamlining annual production updates.",
