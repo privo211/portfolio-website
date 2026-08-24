@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { SiteAnalytics } from "@/components/analytics/site-analytics";
 import "./globals.css";
 
 const inter = Inter({
@@ -23,11 +24,11 @@ export const metadata: Metadata = {
     "Portfolio",
   ],
   authors: [{ name: "Priyanshu Vora" }],
-  metadataBase: new URL("https://priyanshu-vora.vercel.app"),
+  metadataBase: new URL("https://priyanshuvora.com"),
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://priyanshu-vora.vercel.app",
+    url: "https://priyanshuvora.com",
     title: "Priyanshu Vora | Software Engineer",
     description:
       "I build automation that saves enterprises thousands of hours, OCR pipelines, ERP integrations, and backend systems that ship measurable results.",
@@ -56,7 +57,7 @@ const jsonLd = {
   "@type": "Person",
   name: "Priyanshu Vora",
   jobTitle: "Software Engineer",
-  url: "https://priyanshu-vora.vercel.app",
+  url: "https://priyanshuvora.com",
   email: "priyanshu.vora211@gmail.com",
   sameAs: [
     "https://github.com/privo211",
@@ -88,6 +89,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} font-sans antialiased`}>
         {children}
+        <SiteAnalytics />
       </body>
     </html>
   );

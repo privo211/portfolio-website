@@ -347,6 +347,7 @@ export default function Portfolio() {
             {featuredProjects.map((project, i) => (
               <motion.div
                 key={project.id}
+                data-analytics-project={project.id}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -927,6 +928,8 @@ export default function Portfolio() {
               size="lg"
               contentClassName="flex items-center gap-3"
               className="group"
+              data-analytics-event="contact_intent"
+              data-analytics-label="contact_section"
               onClick={() => (window.location.href = `mailto:${SITE_CONFIG.email}`)}
             >
               <Mail className="w-5 h-5 group-hover:scale-110 transition-transform" />
@@ -937,6 +940,12 @@ export default function Portfolio() {
           <div className="mt-12 pt-8 border-t border-foreground/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-muted-foreground/60">
             <p>&copy; {new Date().getFullYear()} {SITE_CONFIG.name}. All rights reserved.</p>
             <div className="flex gap-6">
+              <a
+                href="/privacy"
+                className="hover:text-muted-foreground transition-colors cursor-pointer"
+              >
+                Privacy
+              </a>
               <a
                 href="https://github.com/privo211"
                 target="_blank"
@@ -961,6 +970,8 @@ export default function Portfolio() {
       {/* ─── SCROLL TO TOP ─── */}
       {showScrollTop && (
         <button
+          data-analytics-event="scroll_to_top"
+          data-analytics-label="floating_button"
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="fixed bottom-6 right-6 z-50 rounded-full bg-foreground/10 border border-foreground/20 hover:bg-foreground/20 backdrop-blur-sm w-12 h-12 flex items-center justify-center transition-colors"
           aria-label="Scroll to top"
