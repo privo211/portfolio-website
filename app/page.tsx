@@ -101,29 +101,14 @@ export default function Portfolio() {
         </motion.div>
 
         <div className="relative z-10 max-w-[1400px] mx-auto w-full">
-          <div className="flex justify-end mb-8 md:mb-12">
-            <p className="hidden md:block max-w-sm text-sm leading-relaxed text-muted-foreground text-right">
-              {SITE_CONFIG.tagline}
-            </p>
-          </div>
-
           <motion.h1
             initial={{ y: 120, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: [0.76, 0, 0.24, 1] }}
-            className="text-[10vw] md:text-[8vw] leading-[0.85] font-light tracking-[-0.04em] text-foreground mb-4"
+            className="text-[10vw] md:text-[8vw] leading-[0.85] font-light tracking-[-0.04em] text-foreground mb-8 md:mb-12"
           >
             {SITE_CONFIG.name.toUpperCase()}
           </motion.h1>
-
-          <motion.p
-            initial={{ y: 30, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
-            className="text-lg md:text-xl text-muted-foreground mb-8 md:mb-12 font-light tracking-wide"
-          >
-            {SITE_CONFIG.role}
-          </motion.p>
 
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
             <div className="flex flex-wrap items-center gap-4">
