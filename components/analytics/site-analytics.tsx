@@ -1,14 +1,9 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import type { PortfolioPostHog } from "@/lib/posthog-client";
-
-const VercelAnalytics = dynamic(
-  () => import("@vercel/analytics/next").then((module) => module.Analytics),
-  { ssr: false },
-);
+import { Analytics } from "@vercel/analytics/next";
 
 const CONSENT_STORAGE_KEY = "portfolio:analytics-consent:v1";
 const POSTHOG_CONFIGURED = Boolean(
@@ -316,7 +311,7 @@ export function SiteAnalytics() {
 
   return (
     <>
-      <VercelAnalytics />
+      <Analytics />
 
       {showDialog ? (
         <aside
