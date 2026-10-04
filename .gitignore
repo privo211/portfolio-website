@@ -43,7 +43,15 @@ next-env.d.ts
 
 # screenshot tests
 /Website_Screenshots/
-Priyanshu_Profile_For_Research/
-Website_Screenshots/
-Priyanshu_Profile_For_Research/
-Website_Screenshots/
+/Priyanshu_Profile_For_Research/
+/temp_*.png
+
+# Local AI workspaces and browser automation output
+/.claude/
+/.opencode/
+/.playwright-mcp/
+/.sisyphus/
+
+# Internal root-level notes; keep the public project README
+/*.md
+!/README.md

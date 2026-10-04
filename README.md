@@ -1,51 +1,26 @@
-# Priyanshu Vora — Software Engineer
+<div align="center">
 
-Personal portfolio built with Next.js 16, React 19, Tailwind CSS v4, GSAP, and Motion.
+# Priyanshu Vora · Portfolio
 
-**Live**: [priyanshuvora.com](https://priyanshuvora.com)
+Selected projects, professional experience, and the software I've shipped.
 
-## Tech Stack
+[Visit the portfolio](https://priyanshuvora.com) · [LinkedIn](https://www.linkedin.com/in/priyanshuvora/) · [GitHub](https://github.com/privo211)
 
-- **Framework**: Next.js 15 (App Router)
-- **Styling**: Tailwind CSS v4 with CSS custom properties (light/dark theme system)
-- **Animation**: GSAP + ScrollTrigger, Motion (Framer Motion)
-- **Smooth Scrolling**: Lenis
-- **Icons**: Lucide React
-- **Theme**: next-themes with system preference detection
+</div>
 
-## Getting Started
+---
+
+Built with **Next.js 16**, **React 19**, **TypeScript**, **Tailwind CSS 3**, and **Motion**. Includes responsive layouts, light and dark themes, and project galleries.
+
+## Run locally
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open [localhost:3000](http://localhost:3000). For a production build, run `npm run build` followed by `npm start`.
 
-## Build
+## Configuration
 
-```bash
-npm run build
-npm start
-```
-
-## Analytics
-
-The site uses Vercel Web Analytics for aggregate, cookie-free traffic metrics.
-PostHog behavior analytics is optional and only loads after explicit visitor
-consent. It captures privacy-masked heatmaps, sampled session replay, scroll
-depth, section views, reading-time milestones, downloads, contact intent, and
-outbound links.
-
-To enable PostHog, create an EU Cloud project and add the variables from
-`.env.example` to Vercel. In PostHog project settings:
-
-- discard raw IP data after GeoIP processing;
-- keep replay retention at 30 days or less;
-- keep input masking enabled and network/console capture disabled;
-- do not identify pseudonymous visitors or join contact details to recordings.
-
-Replay sampling is enforced at 15% in the client. Leave
-`NEXT_PUBLIC_POSTHOG_PRIVACY_READY=false` until the raw-IP and retention
-settings above are verified, then set it to `true` in Vercel to activate the
-consent notice and behavior analytics.
+Vercel Web Analytics is included. Optional PostHog analytics loads only after visitor consent; see [.env.example](.env.example) for configuration and privacy prerequisites.
